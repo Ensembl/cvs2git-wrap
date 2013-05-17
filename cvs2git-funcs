@@ -120,6 +120,10 @@ subdir_promote() {
     if [ $numdirs = 1 ]; then
 	echo "All ,v files are under $topdir/ - promote them"
 	mv -v $REPOCVS/$topdir/* $REPOCVS/
+    if [ -f $REPOCVS/$topdir/.cvsignore,v ]; then
+        echo ".cvsignore,v file found under $topdir/ - promote it"
+        mv -v $REPOCVS/$topdir/.cvsignore,v $REPOCVS/.
+    fi
 	rmdir $REPOCVS/$topdir
     else
 	echo "Multiple top level directories ($topdir) prevent subdirectory promotion"
@@ -152,7 +156,10 @@ kill_branches() {
     if [ -f "$KILLFILE" ]; then
         echo "Deleting branches listed in '$KILLFILE'"
         while read branch; do
-            git branch -D "$branch"
+            #Skip if the line starts with a hash
+            if [[ ! $branch == \#* ]] ; then
+                git branch -D "$branch"
+            fi
         done < "$KILLFILE"
     fi
 }
