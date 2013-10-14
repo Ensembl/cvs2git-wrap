@@ -46,20 +46,20 @@ done
 # This will fail quietly on HEAD,master.diff
 # but that's fine because it is just one, and a moving target anyway
 echo '# Branches and tags with nul-diff'
-find "$IMPORTDIR/checkrevs" -name '*.diff' -size 0 -printf '%f\n' | sed -e 's/\.diff$//' | \
+find "$IMPORTDIR/checkrevs" -name '*.diff' -size 0 | xargs -n1 basename | sed -e 's/\.diff$//' | \
     xargs git show-ref | sort
 
 if [ -n "$LIST_ALL" ]; then
     echo
     echo '# Branches and tags with diffs'
-    find "$IMPORTDIR/checkrevs" -name '*.diff' ! -size 0 -printf '%f\n' | sed -e 's/\.diff$//' | \
+    find "$IMPORTDIR/checkrevs" -name '*.diff' ! -size 0 | xargs -n1 basename | sed -e 's/\.diff$//' | \
         xargs git show-ref | sort | grep -vE '/unlabeled-[0-9]'
 else
     {
         printf "\n# Show md5sums of variability-trimmed checkrevs/*.diff\n"
         printf "# If they look nice, you can pass -A\n\n"
         cd "$IMPORTDIR/checkrevs"
-        for fn in $( find . -name '*.diff' ! -size 0 -printf '%f\n' ); do
+        for fn in $( find . -name '*.diff' ! -size 0 | xargs -n1 basename ); do
             printf "%s  %s\n" \
                 $( md5sum <( grep -vE '^([-+]{3}|diff)' $fn ) | cut -f1 -d' ' ) \
                 $fn
