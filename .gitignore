@@ -15,6 +15,3 @@
 
 # contains lists of users, instead commit the template
 cvs2git.options
-
-# purely for speed optimisation of the checkrevs step
-*.known-good.txt
