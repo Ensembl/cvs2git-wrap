@@ -1,25 +1,29 @@
 #! /bin/sh
 
-# This is a wrapper script to set the install path (I use v2.3.0) and
+# This is a wrapper script to set the install path (I use v2.4.0) and
 # run the program there
 #
 #
 # To get my installed copy, I did something like
 #
+#		wget http://cvs2svn.tigris.org/files/documents/1462/49237/cvs2svn-2.4.0.tar.gz
+#		tar zxvf cvs2svn-2.4.0.tar.gz
+#   mv cvs2svn-2.4.0 ~/programs/cvs2svn-2.4.0
+#
+#   # or you can do:
 #   svn checkout http://cvs2svn.tigris.org/svn/cvs2svn
 #   # actually it looks like I used "git-svn clone"
-#
 #   cd cvs2svn
-#   ...get on the 2.3.0 release
+#   ...get on the 2.4.0 release
 #
-#   make install DESTDIR=INST.230.271 PYTHON=/software/bin/python-2.7.1
+#   We do not bother building the library since it works if we point directly at the decompressed dir
 
-: ${CVS2SVN_INST:="$HOME/mumble/cvs2svn-2.4.0/software/python-2.7.3"}
+: ${CVS2SVN_INST:="$HOME/programs/cvs2svn-2.4.0"}
 if [ ! -d $CVS2SVN_INST ]; then
     echo -e "cvs2svn: install expected in\n  $CVS2SVN_INST\n but not found.\n\n Please point CVS2SVN_INST at your cvs2svn DESTDIR - it should contain bin/cvs2git ." >&2
     exit 1
 fi
 
-export PYTHONPATH="$CVS2SVN_INST/lib/python2.7/site-packages"
+export PYTHONPATH="$CVS2SVN_INST:$PYTHONPATH"
 
-exec $CVS2SVN_INST/bin/cvs2git $*
+exec $CVS2SVN_INST/cvs2git $*
