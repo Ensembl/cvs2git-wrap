@@ -8,7 +8,7 @@
 PROJ=${1:-ensembl-foo}
 CANONPFX=ENSCOPY-
 
-IEC_NAME=$PROJ
+IEC_NAME=${PROJ}.iec
 
 GIDIR=$(
     cd $( dirname $0 )
