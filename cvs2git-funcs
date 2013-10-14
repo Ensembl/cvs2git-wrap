@@ -6,13 +6,23 @@ cvs2git__init() {
     set -e
 
 # Verbosity is optional
-set -x
+#set -x
 
     diffok=0
     diffbad=0
 
+    if [[ $(uname) == 'Darwin' ]]; then
+        OS='mac'
+    else
+        OS='linux'
+    fi
+
     C2G_TMP=`mktemp -d -t cvs2git-$PROJ.XXXXXX`
-    trap 'echo -e "\nLeaving you to clean up: C2G_TMP=$C2G_TMP\n  rm -rf $C2G_TMP"' EXIT
+    if [[ "$OS" == 'mac' ]]; then
+        echo $'\n'"Leaving you to clean up: C2G_TMP=$C2G_TMP"$'\n'"  rm -rf $C2G_TMP"
+    else
+        trap 'echo -e "\nLeaving you to clean up: C2G_TMP=$C2G_TMP\n  rm -rf $C2G_TMP"' EXIT
+    fi
 
     REPOCVS=$C2G_TMP/repo
     REPOGIT=$C2G_TMP/git
@@ -20,7 +30,9 @@ set -x
     # mktemp gives us privacy.  We probably need to share with the
     # team.  Let umask have its effect this way.
     mkdir -p $C2G_TMP/checkrevs/
-    #chmod -v --reference $C2G_TMP/checkrevs $C2G_TMP
+    if [[ "$OS" != 'mac' ]]; then
+        chmod -v --reference $C2G_TMP/checkrevs $C2G_TMP
+    fi
 
     echo Running for PROJ=$PROJ in C2G_TMP=$C2G_TMP
 }
@@ -212,7 +224,15 @@ this was made just after the cvs2git import process
 
     kill_branches
 
-    echo -e "\nTo view\n  (cd $REPOGIT && gitk --all &)\n\n"
+    if [[ "$OS" == 'mac' ]]; then
+        echo ''
+        echo 'To view'
+        echo ''
+        echo "  (cd $REPOGIT && gitk --all &)"
+        echo $'\n\n'
+    else
+        echo -e "\nTo view\n  (cd $REPOGIT && gitk --all &)\n\n"
+    fi    
 }
 
 
@@ -268,9 +288,9 @@ checktag() {
     # want to check some more after
     cd $GITCO
     if diff -xCVS -x.git -ru $CVSCO $GITCO > $CHKNAME; then
-    diffok=$[ $diffok + 1 ]
+        diffok=$[ $diffok + 1 ]
     else
-    diffbad=$[ $diffbad + 1 ]
+        diffbad=$[ $diffbad + 1 ]
     fi
 }
 
@@ -340,7 +360,16 @@ clean_git_workingcopy() {
 
 checktag_show_summary() {
 # Show diffing summary
-    echo -e "\n\nDiffed some tags and/or branches.\n  Found $diffok with no diff.\n  Found $diffbad with differences between CVS and Git,\n    see $C2G_TMP/checkrevs/\n\n"
+    if [[ "$OS" == 'mac' ]]; then
+        echo $'\n\nDiffed some tags and/or branches.'
+        echo ''
+        echo "  Leaving you to clean up: C2G_TMP=$C2G_TMP"
+        echo ''
+        echo "rm -rf $C2G_TMP"
+    else
+        echo -e "\n\nDiffed some tags and/or branches.\n  Found $diffok with no diff.\n  Found $diffbad with differences between CVS and Git,\n    see $C2G_TMP/checkrevs/\n\n"
+    fi
+    
     find $C2G_TMP/checkrevs/ -type f -size +0 -ls
 }
 
