@@ -512,7 +512,7 @@ ctx.retain_conflicting_attic_files = False
 # (name, email).  Please substitute your own project's usernames here
 # to use with the author_transforms option of GitOutputOption below.
 author_transforms={
-    'anacode' : 'Anacode <anacode>',
+    'ensembl' : 'Ensembl <ensembl>',
     'cvs2git' : 'cvs2git <cvs2git>',
 #    'jrandom' : ('J. Random', 'jrandom@example.com'),
 #    'mhagger' : 'Michael Haggerty <mhagger@alum.mit.edu>',
