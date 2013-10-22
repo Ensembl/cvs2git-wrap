@@ -1,3 +1,7 @@
+----
+'''This document is the original Anacode documentation. It is kept alive because it describes a lot of method and technical knowledge required to make a CVS to Git migration work.'''
+----
+
 == Introduction ==
 These files were created as an internal project during the migration
 of [https://github.com/Anacode/ensembl-otter] from
