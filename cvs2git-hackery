@@ -1,0 +1,44 @@
+# -*- shell-script -*-
+
+
+hackery__init() {
+  # We assume this for error catching
+  set -e
+}
+
+# Assert that the current working repo is as expected
+is_expected_cvsrepo() {
+  REPO=$1
+  TARGET=$2
+  if [ -f "$REPO/CVSROOT/rcsinfo" ] && [ -f "$REPO/$TARGET" ]; then
+  	:
+  else
+    echo "Directory '$REPO' does not look like our repo" >&2
+    exit 1
+  fi
+
+  if [ -f "$REPO/CVSROOT/rcsinfo,v" ]; then
+    echo "Directory '$REPO' still contains a CVSROOT/*,v file.  This makes me nervous." >&2
+    exit 1
+  fi
+}
+
+# Create fake commits. To use invoke like so
+# fake_lost_deltatext \
+#    modules/Bio/EnsEMBL/AceDB/Contig.pm -J \
+#    1.6 1.5 1.4 1.3 1.2 1.1 \
+#    >> ensembl/modules/Bio/EnsEMBL/AceDB/Attic/Contig.pm,v
+fake_lost_deltatext() {
+  echo "   Write junk deltatext to $1" >&2
+  perl -we 'use strict;
+ my $file = shift;
+ my $add_junktext = ($ARGV[0] eq "-J" && shift);
+ foreach my $vsn (@ARGV) {
+   my $txt = ($add_junktext
+              ? "a0 1\nREVISION $vsn WAS LOST.  JUNK LINE INSERTED IN DELTATEXT\n"
+              : "");
+   print "\n\n$vsn\nlog\n\@THIS REVISION WAS LOST ($file v$vsn).\n
+Taking the earliest one remaining.\n\@\ntext\n\@$txt\@\n" }' $*
+}
+
+hackery__init

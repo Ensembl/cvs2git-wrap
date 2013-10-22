@@ -380,6 +380,3 @@ git_preresetcheck() {
     exit 11
     fi
 }
-
-
-cvs2git__init

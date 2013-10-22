@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 
 # Written using Git 1.7.2.3, may work with older
 #

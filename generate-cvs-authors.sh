@@ -22,6 +22,8 @@ else
 fi
 
 echo 'author_transforms={'
+echo "'ensembl' : 'Ensembl <ensembl>',"
+echo "'cvs2git' : 'cvs2git <cvs2git>',"
 for author in $authors; do
   #Combine stdout and stderr. Then look for the bad string
   finger_output=$(finger $author 2>&1)

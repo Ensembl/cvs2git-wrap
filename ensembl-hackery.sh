@@ -1,36 +1,19 @@
-#! /bin/sh
+#!/bin/bash
 
-set -e
+GIDIR=$(
+  cd $( dirname $0 )
+  echo $PWD
+)
+export PATH=$GIDIR:$PATH
+
+# Import functions
+source $GIDIR/cvs2git-hackery
+
 REPO=$1
 
-if [ -f "$REPO/CVSROOT/rcsinfo" ] && [ -f "$REPO/ensembl/modules/Bio/EnsEMBL/AceDB/Attic/Contig.pm,v" ]; then
-    # it looks like our repo
-    :
-else
-    echo "Directory '$REPO' does not look like our repo" >&2
-    exit 1
-fi
-
-if [ -f "$REPO/CVSROOT/rcsinfo,v" ]; then
-    echo "Directory '$REPO' still contains a CVSROOT/*,v file.  This makes me ervous." >&2
-    exit 1
-fi
-
+is_expected_cvsrepo $REPO 'ensembl/modules/Bio/EnsEMBL/AceDB/Attic/Contig.pm,v'
 
 cd $REPO
-
-fake_lost_deltatext() {
-    echo "   Write junk deltatext to $1" >&2
-    perl -we 'use strict;
- my $file = shift;
- my $add_junktext = ($ARGV[0] eq "-J" && shift);
- foreach my $vsn (@ARGV) {
-   my $txt = ($add_junktext
-              ? "a0 1\nREVISION $vsn WAS LOST.  JUNK LINE INSERTED IN DELTATEXT\n"
-              : "");
-   print "\n\n$vsn\nlog\n\@THIS REVISION WAS LOST ($file v$vsn).\n
-Taking the earliest one remaining.\n\@\ntext\n\@$txt\@\n" }' $*
-}
 
 # Restore some missing (outdated?) deltatext, else cvs2git refuses to run
 fake_lost_deltatext \
