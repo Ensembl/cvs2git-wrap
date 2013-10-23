@@ -19,6 +19,8 @@ export PATH=$GIDIR:$PATH
 # Import functions
 source $GIDIR/cvs2git-funcs
 
+cvs2git__init
+
 unpack_hwime "${CVS2GIT_SQUIRREL_DIR}/${PROJ}.repo.tgz" || fetchrepo
 canon_repocvs $CANONPFX$( echo $PROJ | tr a-z A-Z )
 subdir_promote
