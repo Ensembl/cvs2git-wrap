@@ -217,10 +217,10 @@ this was made just after the cvs2git import process
     # For git_preresetcheck
     touch .git/c2g-mark
 
-    [ -n "$CVS2GIT_SQUIRREL_DIR" ] && squirrel_hwime_git
-
     # Tidy up and make a neat checkout
     rm -v out.blob out.iec out.dump
+
+    [ -n "$CVS2GIT_SQUIRREL_DIR" ] && squirrel_hwime_git
 
     kill_branches
 
