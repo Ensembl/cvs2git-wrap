@@ -34,6 +34,8 @@ cvs2git__init() {
         chmod -v --reference $C2G_TMP/checkrevs $C2G_TMP
     fi
 
+    [ -n "$CVS2GIT_SQUIRREL_DIR" ] && mkdir -p "$CVS2GIT_SQUIRREL_DIR"
+
     echo Running for PROJ=$PROJ in C2G_TMP=$C2G_TMP
 }
 
