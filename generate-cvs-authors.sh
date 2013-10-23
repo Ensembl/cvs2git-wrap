@@ -26,11 +26,11 @@ echo "'ensembl' : 'Ensembl <ensembl>',"
 echo "'cvs2git' : 'cvs2git <cvs2git>',"
 for author in $authors; do
   #Combine stdout and stderr. Then look for the bad string
-  finger_output=$(finger $author 2>&1)
+  finger_output=$(finger -m $author 2>&1)
   if [[ "$finger_output" == *"no such user"* ]]; then
     echo "    '$author' : ('$author','$author@sanger.ac.uk')," 
   else
-    full_name=$(finger $author | sed -e '/Name/!d' -e 's/.*Name: //' | perl -lne '$v=$1 if /^([-a-z ]+)/i; $v =~ s/\s+$//; print $v')
+    full_name=$(finger -m $author | sed -e '/Name/!d' -e 's/.*Name: //' | perl -lne '$v=$1 if /^([-a-z ]+)/i; $v =~ s/\s+$//; print $v')
     echo "    '$author' : ('$full_name','$n@sanger.ac.uk')," 
   fi
 done
