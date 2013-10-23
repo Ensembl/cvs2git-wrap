@@ -31,7 +31,7 @@ for author in $authors; do
     echo "    '$author' : ('$author','$author@sanger.ac.uk')," 
   else
     full_name=$(finger -m $author | sed -e '/Name/!d' -e 's/.*Name: //' | perl -lne '$v=$1 if /^([-a-z ]+)/i; $v =~ s/\s+$//; print $v')
-    echo "    '$author' : ('$full_name','$n@sanger.ac.uk')," 
+    echo "    '$author' : ('$full_name','$author@sanger.ac.uk'),"
   fi
 done
 echo "}"
