@@ -282,7 +282,7 @@ checktag() {
     rm -rf $CVSCO
     mkdir $CVSCO
     cd $CVSCO
-    cvs -q -d $REPOCVS co -d $CVSCO -r $CVSREV . > /dev/null
+    cvs -q -d $REPOCVS co -d $CVSCO -r $CVSREV -kk . > /dev/null
 
     # Compare; return the exit code rather than barfing, because we
     # want to check some more after

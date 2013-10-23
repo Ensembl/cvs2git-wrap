@@ -453,7 +453,7 @@ ctx.file_property_setters.extend([
     ConditionalPropertySetter(
         cvs_file_is_binary, KeywordHandlingPropertySetter('untouched'),
         ),
-    KeywordHandlingPropertySetter('expanded'),
+    KeywordHandlingPropertySetter('collapsed'),
 
     ])
 ctx.revision_property_setters.extend([
