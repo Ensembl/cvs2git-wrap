@@ -34,6 +34,8 @@ cvs2git__init() {
         chmod -v --reference $C2G_TMP/checkrevs $C2G_TMP
     fi
 
+    [ -n "$CVS2GIT_SQUIRREL_DIR" ] && mkdir -p "$CVS2GIT_SQUIRREL_DIR"
+
     echo Running for PROJ=$PROJ in C2G_TMP=$C2G_TMP
 }
 
@@ -217,10 +219,10 @@ this was made just after the cvs2git import process
     # For git_preresetcheck
     touch .git/c2g-mark
 
-    [ -n "$CVS2GIT_SQUIRREL_DIR" ] && squirrel_hwime_git
-
     # Tidy up and make a neat checkout
     rm -v out.blob out.iec out.dump
+
+    [ -n "$CVS2GIT_SQUIRREL_DIR" ] && squirrel_hwime_git
 
     kill_branches
 
@@ -282,7 +284,7 @@ checktag() {
     rm -rf $CVSCO
     mkdir $CVSCO
     cd $CVSCO
-    cvs -q -d $REPOCVS co -d $CVSCO -r $CVSREV . > /dev/null
+    cvs -q -d $REPOCVS co -d $CVSCO -r $CVSREV -kk . > /dev/null
 
     # Compare; return the exit code rather than barfing, because we
     # want to check some more after
