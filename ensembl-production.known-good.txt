@@ -1,0 +1,4 @@
+# Branches and tags with nul-diff
+116af6065daf1c5b939f33e73c2404cc3dad09a7 refs/tags/cvs/start
+94b2518dff638d2606c99e4218f89fa7b248dba5 refs/heads/cvs/branch-ensembl-73
+94b2518dff638d2606c99e4218f89fa7b248dba5 refs/tags/cvs/ensembl-73-branchpoint
