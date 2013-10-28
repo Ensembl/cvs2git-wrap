@@ -1,0 +1,9 @@
+# Branches and tags with nul-diff
+3a80a051d0abde5a38042c2ab09521cc91e5c494 refs/tags/cvs/ensembl-73-branchpoint
+4889fd5e2529b85d0d9026733af8f06ff457340b refs/heads/cvs/branch-ensemblgenomes-20-73
+4889fd5e2529b85d0d9026733af8f06ff457340b refs/tags/cvs/tag-ensemblgenomes-20-73
+48a66fb4cfa433f2376332c5dc17e9bacab8b11a refs/heads/cvs/branch-ensembl-73
+b1914954c9dab8394b8fe68366b2a12ae936e010 refs/heads/cvs/branch-ensembl-72
+b1914954c9dab8394b8fe68366b2a12ae936e010 refs/heads/cvs/branch-ensemblgenomes-19-72
+b1914954c9dab8394b8fe68366b2a12ae936e010 refs/tags/cvs/ensembl-72-branchpoint
+b1914954c9dab8394b8fe68366b2a12ae936e010 refs/tags/cvs/tag-ensemblgenomes-19-72

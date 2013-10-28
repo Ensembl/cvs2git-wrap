@@ -45,6 +45,8 @@ fetchrepo() {
 
     case $PROJ in
     ensembl*) fetchrepo_ensembl ;;
+    public-plugins) fetchrepo_ensembl ;;
+    sanger-plugins) fetchrepo_ensembl ;;
     anacode) fetchrepo_intcvs1 ;;
     acedb) fetchrepo_intcvs1 ;;
     zmap) fetchrepo_intcvs1 ;;
