@@ -1,0 +1,10 @@
+/cbuild/*
+!/cbuild/README.txt
+/conf/Plugins.pm
+/conf/packed/*.packed
+/htdocs/das/*
+!/htdocs/das/das.xsl
+/htdocs/minified/*
+/htdocs/robots.txt
+opensearch
+Thumbs.db

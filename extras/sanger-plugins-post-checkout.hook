@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ ! -d sanger/geocity ]
+then
+  mkdir sanger/geocity
+fi

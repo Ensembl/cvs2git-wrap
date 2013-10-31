@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ ! -d htdocs/minified ]
+then
+  mkdir htdocs/minified
+fi
+
+if [ ! -d conf/packed ]
+then
+  mkdir conf/packed
+fi
