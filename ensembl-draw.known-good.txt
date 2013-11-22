@@ -239,14 +239,12 @@ c163e38d70b718a55545f7bdc8d4aadd1d405d93 refs/tags/cvs/ensembl-68-branchpoint
 c28a621aef795c084c594af7cdec862c3a855f92 refs/heads/cvs/branch-ensembl-70
 c317a5296677816b652c11ff3a31b922370d5513 refs/tags/cvs/ensembl-24-1-branchpoint
 c33e591a8bb795117976aa0a968d0f31bf88671b refs/tags/cvs/ensembl-45-branchpoint
-c4029b06f259fa0e3f03bb153c47fb451c6534e8 refs/tags/cvs/ensembl-73-branchpoint
 c429970109380923f4da5f53f490f9801c8cc87c refs/heads/cvs/branch_ensembl_58
 c4ab5aed8dae008e59233dd72aee4a082a222ba9 refs/tags/cvs/mergepoint-vega-46-dev-e48
 c4ab5aed8dae008e59233dd72aee4a082a222ba9 refs/tags/cvs/mergepoint-vega-46-dev-head-1
 c5966e49df59d7d4e5214a7360a9b4895abe0fdf refs/heads/cvs/branch-ensembl-24-1
 c5b741df3f8ac52ab5b3206a3543300e4841027c refs/heads/cvs/branch-ensembl-55
 c69dcd39d469f625ecdc7bb91c7bb75363e07377 refs/heads/cvs/branch_variation
-c7d25c83e91e638a47659de5f16cbc8ae3c4d722 refs/heads/cvs/branch-ensembl-73
 c8dba138a0e1bafbf8457b3dc632983c001d57eb refs/heads/cvs/branch-ensembl-35
 c91b37746da8d94e34be70479e7aa8cdf306339b refs/heads/cvs/branch-vega-10
 c91b37746da8d94e34be70479e7aa8cdf306339b refs/tags/cvs/vega-12-branchpoint
