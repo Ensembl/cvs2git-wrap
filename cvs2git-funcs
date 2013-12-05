@@ -5,8 +5,10 @@ cvs2git__init() {
     # We assume this for error catching
     set -e
 
-# Verbosity is optional
-#set -x
+    # Verbosity is optional
+    if [ -n "$DEBUG" ]; then
+      set -x
+    fi
 
     diffok=0
     diffbad=0
@@ -47,6 +49,7 @@ fetchrepo() {
     ensembl*) fetchrepo_ensembl ;;
     public-plugins) fetchrepo_ensembl ;;
     sanger-plugins) fetchrepo_ensembl ;;
+    ensj-*) fetchrepo_ensembl ;;
     anacode) fetchrepo_intcvs1 ;;
     acedb) fetchrepo_intcvs1 ;;
     zmap) fetchrepo_intcvs1 ;;
@@ -61,6 +64,9 @@ fetchrepo() {
 }
 
 fetchrepo_ensembl() {
+    if [ "$SCP_NO_BAIL" ]; then
+      set +e
+    fi
     scp -rp cvs.sanger.ac.uk:/cvsroot/ensembl/$PROJ $REPOCVS/
 
 # Provide enough CVSROOT to operate.
@@ -69,6 +75,10 @@ fetchrepo_ensembl() {
 # Don't include the ,v files because they won't have our tags, and we
 # aren't going to import them
     scp -rp cvs.sanger.ac.uk:/cvsroot/ensembl/CVSROOT/{modules,loginfo,commitinfo,cvswrappers,config,taginfo,verifymsg,editinfo,rcsinfo,notify,checkoutlist,cvsignore} $REPOCVS/CVSROOT/
+    
+    if [ "$SCP_NO_BAIL" ]; then
+      set -e
+    fi
 }
 
 fetchrepo_intcvs1() {
