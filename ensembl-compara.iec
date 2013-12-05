@@ -1,0 +1,7 @@
+commit refs/heads/master
+mark :999999999
+author Matthieu Muffato <muffato@ebi.ac.uk> 471139200 +0000
+committer Matthieu Muffato <muffato@ebi.ac.uk> 471139200 +0000
+data 21
+initial empty commit
+
