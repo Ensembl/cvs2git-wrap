@@ -17,7 +17,7 @@ cvs2git__init() {
         OS='linux'
     fi
 
-    C2G_TMP=`mktemp -d -t cvs2git-$PROJ.XXXXXX`
+    C2G_TMP=`mktemp -d -t cvs2git-${PROJ_NO_SLASHES}.XXXXXX`
     if [[ "$OS" == 'mac' ]]; then
         echo $'\n'"Leaving you to clean up: C2G_TMP=$C2G_TMP"$'\n'"  rm -rf $C2G_TMP"
     else
@@ -106,11 +106,11 @@ unpack_hwime() { # here's one I made earlier
 
 # squirrel away some shortcut tarballs?
 squirrel_hwime_cvs() {
-    (cd $C2G_TMP && tar cfz "${CVS2GIT_SQUIRREL_DIR}/${PROJ}.repo.tgz" repo)
+    (cd $C2G_TMP && tar cfz "${CVS2GIT_SQUIRREL_DIR}/${PROJ_NO_SLASHES}.repo.tgz" repo)
 }
 
 squirrel_hwime_git() {
-    (cd $C2G_TMP && tar cfz "${CVS2GIT_SQUIRREL_DIR}/${PROJ}.git.tgz" git)
+    (cd $C2G_TMP && tar cfz "${CVS2GIT_SQUIRREL_DIR}/${PROJ_NO_SLASHES}.git.tgz" git)
 }
 
 
@@ -151,7 +151,7 @@ subdir_promote() {
 }
 
 apply_hackery() {
-    HACKFILE=$GIDIR/$PROJ-hackery.sh
+    HACKFILE=$GIDIR/${PROJ_NO_SLASHES}-hackery.sh
     if [ -f "$HACKFILE" ]; then
     echo Applying $HACKFILE
     $HACKFILE $REPOCVS || {
@@ -172,7 +172,7 @@ apply_hackery() {
 }
 
 kill_branches() {
-    KILLFILE=$GIDIR/$PROJ.kill-branches.txt
+    KILLFILE=$GIDIR/${PROJ_NO_SLASHES}.kill-branches.txt
     if [ -f "$KILLFILE" ]; then
         echo "Deleting branches listed in '$KILLFILE'"
         while read branch; do

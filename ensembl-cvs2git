@@ -6,6 +6,7 @@
 #    TMPDIR=/dev/shm ./git-importing/cvs2git-ensembl-foo ensembl-otter
 
 PROJ=${1:-ensembl-foo}
+PROJ_NO_SLASHES=`echo "$PROJ" | sed 's/\//_/g'`
 CANONPFX=ENSCOPY-
 
 IEC_NAME=${PROJ}.iec
@@ -21,11 +22,11 @@ source $GIDIR/cvs2git-funcs
 
 cvs2git__init
 
-unpack_hwime "${CVS2GIT_SQUIRREL_DIR}/${PROJ}.repo.tgz" || fetchrepo
-canon_repocvs $CANONPFX$( echo $PROJ | tr a-z A-Z )
+unpack_hwime "${CVS2GIT_SQUIRREL_DIR}/${PROJ_NO_SLASHES}.repo.tgz" || fetchrepo
+canon_repocvs $CANONPFX$( echo $PROJ_NO_SLASHES | tr a-z A-Z )
 subdir_promote
 
-unpack_hwime "${CVS2GIT_SQUIRREL_DIR}/${PROJ}.git.tgz"  || do_import
+unpack_hwime "${CVS2GIT_SQUIRREL_DIR}/${PROJ_NO_SLASHES}.git.tgz"  || do_import
 
 checktags_all
 
