@@ -11,6 +11,12 @@ if [ "$1" = '-A' ]; then
     shift
 fi
 
+if [[ $(uname) == 'Darwin' ]]; then
+    CHECKSUM_BIN='md5'
+else
+    CHECKSUM_BIN='md5sum'
+fi
+
 IMPORTDIR=$1
 GITREPO=${2:-$IMPORTDIR/git}
 cd $GITREPO
@@ -61,7 +67,7 @@ else
         cd "$IMPORTDIR/checkrevs"
         for fn in $( find . -name '*.diff' ! -size 0 | xargs -n1 basename ); do
             printf "%s  %s\n" \
-                $( md5sum <( grep -vE '^([-+]{3}|diff)' $fn ) | cut -f1 -d' ' ) \
+                $( $CHECKSUM_BIN <( grep -vE '^([-+]{3}|diff)' $fn ) | cut -f1 -d' ' ) \
                 $fn
         done
     } >&2
