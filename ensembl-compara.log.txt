@@ -1,0 +1,1799 @@
+matttop:~/src/cvs2git-wrap (compara $>) $ TMPDIR=/run/shm CVS2GIT_SQUIRREL_DIR=/home/matthieu/migration-squirrel CVS2SVN_INST=/usr/bin/ IEC_FILE=/home/matthieu/src/cvs2git-wrap/ensembl-compara.iec  ./ensembl-cvs2git ensembl-compara
+mode of ‘/run/shm/cvs2git-ensembl-compara.FZpD3G’ changed from 0700 (rwx------) to 0755 (rwxr-xr-x)
+Running for PROJ=ensembl-compara in C2G_TMP=/run/shm/cvs2git-ensembl-compara.FZpD3G
+Unpacking /home/matthieu/migration-squirrel/ensembl-compara.repo.tgz - here is one I made earlier
+/home/matthieu/src/cvs2git-wrap/ensembl-compara-hackery.sh absent, no worries
+You could set FETCHREPO_INTERACT to break into a shell here
+‘/run/shm/tmp.aP3wSf1jl9’ -> ‘/run/shm/cvs2git-ensembl-compara.FZpD3G/repo’
+All ,v files are under ensembl-compara/ - promote them
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/Attic’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/Attic’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/docs’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/docs’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/LICENSE,v’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/LICENSE,v’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/modules’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/modules’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/scripts’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/scripts’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/sql’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/sql’
+----- pass 1 (CollectRevsPass) -----
+Examining all CVS ',v' files...
+Done
+----- pass 2 (CleanMetadataPass) -----
+Converting metadata to UTF8...
+Done
+----- pass 3 (CollateSymbolsPass) -----
+Checking for forced tags with commits...
+Done
+----- pass 4 (FilterSymbolsPass) -----
+Filtering out excluded symbols and summarizing items...
+Done
+----- pass 5 (SortRevisionsPass) -----
+Sorting CVS revision summaries...
+Done
+----- pass 6 (SortSymbolsPass) -----
+Sorting CVS symbol summaries...
+Done
+----- pass 7 (InitializeChangesetsPass) -----
+Creating preliminary commit sets...
+Done
+----- pass 8 (BreakRevisionChangesetCyclesPass) -----
+Breaking revision changeset dependency cycles...
+Done
+----- pass 9 (RevisionTopologicalSortPass) -----
+Generating CVSRevisions in commit order...
+Done
+----- pass 10 (BreakSymbolChangesetCyclesPass) -----
+Breaking symbol changeset dependency cycles...
+Done
+----- pass 11 (BreakAllChangesetCyclesPass) -----
+Breaking CVSSymbol dependency loops...
+Done
+----- pass 12 (TopologicalSortPass) -----
+Generating CVSRevisions in commit order...
+Done
+----- pass 13 (CreateRevsPass) -----
+Mapping CVS revisions to Subversion commits...
+Done
+----- pass 14 (SortSymbolOpeningsClosingsPass) -----
+Sorting symbolic name source revisions...
+Done
+----- pass 15 (IndexSymbolsPass) -----
+Determining offsets for all symbolic names...
+Done.
+----- pass 16 (OutputPass) -----
+
+cvs2svn Statistics:
+------------------
+Total CVS Files:              2877
+Total CVS Revisions:         15439
+Total CVS Branches:          68886
+Total CVS Tags:              70022
+Total Unique Tags:             156
+Total Unique Branches:         158
+CVS Repos Size in KB:       191850
+Total SVN Commits:            8636
+First Revision Date:    Fri Jun  8 13:46:40 2001
+Last Revision Date:     Fri Dec 13 09:22:18 2013
+------------------
+w: IEC_NAME overridden by IEC_FILE=/home/matthieu/src/cvs2git-wrap/ensembl-compara.iec
+Initialised empty Git repository in /run/shm/cvs2git-ensembl-compara.FZpD3G/git/.git/
+git-fast-import statistics:
+---------------------------------------------------------------------
+Alloc'd objects:      65000
+Total objects:        63541 (      2279 duplicates                  )
+      blobs  :        12767 (      1954 duplicates      11060 deltas of      11742 attempts)
+      trees  :        42443 (       325 duplicates      31781 deltas of      39322 attempts)
+      commits:         8331 (         0 duplicates          0 deltas of          0 attempts)
+      tags   :            0 (         0 duplicates          0 deltas of          0 attempts)
+Total branches:         316 (        81 loads     )
+      marks:     1073741824 (     23052 unique    )
+      atoms:           1529
+Memory total:          5344 KiB
+       pools:          2298 KiB
+     objects:          3046 KiB
+---------------------------------------------------------------------
+pack_report: getpagesize()            =       4096
+pack_report: core.packedGitWindowSize = 1073741824
+pack_report: core.packedGitLimit      = 8589934592
+pack_report: pack_used_ctr            =       1535
+pack_report: pack_mmap_calls          =        289
+pack_report: pack_open_windows        =          1 /          1
+pack_report: pack_mapped              =   89490027 /   89490027
+---------------------------------------------------------------------
+
+removed ‘out.blob’
+removed ‘out.iec’
+removed ‘out.dump’
+
+To view
+  (cd /run/shm/cvs2git-ensembl-compara.FZpD3G/git && gitk --all &)
+
+
+Will compare CVS vs. Git contents for
+
+  HEAD vs. master
+
+  tags:
+    baseline-branchpoint
+    blastz-pipeline_1beta
+    bp-branch-new-seqstore
+    branch-1000genomes-13-69
+    branch-ensemblgenomes-17-70-branchpoint
+    branchpoint-vega-37-1
+    branchpoint-vega-37-2
+    branchpoint-vega-38-dev
+    branchpoint-vega-39-dev
+    compara-hive-dev
+    eg-56-branchpoint
+    ensembl-10-branchpoint
+    ensembl-11-branchpoint
+    ensembl-12-branchpoint
+    ensembl-13-branchpoint
+    ensembl-14-branchpoint
+    ensembl-15-branchpoint
+    ensembl-16-branchpoint
+    ensembl-17-branchpoint
+    ensembl-18-branchpoint
+    ensembl-19-branchpoint
+    ensembl-20-branchpoint
+    ensembl-21-branchpoint
+    ensembl-22-branchpoint
+    ensembl-23-branchpoint
+    ensembl-24-branchpoint
+    ensembl-25-branchpoint
+    ensembl-26-branchpoint
+    ensembl-27-branchpoint
+    ensembl-28-branchpoint
+    ensembl-29-branchpoint
+    ensembl-30-branchpoint
+    ensembl-31-branchpoint
+    ensembl-32-branchpoint
+    ensembl-33-branchpoint
+    ensembl-34-branchpoint
+    ensembl-35-branchpoint
+    ensembl-36-branchpoint
+    ensembl-37-branchpoint
+    ensembl-39-branchpoint
+    ensembl-4-1-branchpoint
+    ensembl-4-2-branchpoint
+    ensembl-4-branchpoint
+    ensembl-40-branchpoint
+    ensembl-41-branchpoint
+    ensembl-42-branchpoint
+    ensembl-43-branchpoint
+    ensembl-44-branchpoint
+    ensembl-45-branchpoint
+    ensembl-46-branchpoint
+    ensembl-47-branchpoint
+    ensembl-47-mergepoint-1
+    ensembl-47-mp-1
+    ensembl-48-branchpoint
+    ensembl-49-branchpoint
+    ensembl-5-branchpoint
+    ensembl-50-branchpoint
+    ensembl-51-branchpoint
+    ensembl-52-branchpoint
+    ensembl-53-branchpoint
+    ensembl-54-branchpoint
+    ensembl-55-branchpoint
+    ensembl-56-branchpoint
+    ensembl-57-2-branchpoint
+    ensembl-57-branchpoint
+    ensembl-58-branchpoint
+    ensembl-59-branchpoint
+    ensembl-6-branchpoint
+    ensembl-60-branchpoint
+    ensembl-61-branchpoint
+    ensembl-62-branchpoint
+    ensembl-63-branchpoint
+    ensembl-64-branchpoint
+    ensembl-65-branchpoint
+    ensembl-66-branchpoint
+    ensembl-67-branchpoint
+    ensembl-68-branchpoint
+    ensembl-69-branchpoint
+    ensembl-7-branchpoint
+    ensembl-70-branchpoint
+    ensembl-71-branchpoint
+    ensembl-72-branchpoint
+    ensembl-73-branchpoint
+    ensembl-74-branchpoint
+    ensembl-8-branchpoint
+    ensembl-9-branchpoint
+    ensembl-branchpoint-38
+    ensembl-magic-branchpoint
+    ensemblgenomes-10-63-branchpoint
+    ensemblgenomes-11-64-branchpoint
+    ensemblgenomes-12-65-branchpoint
+    ensemblgenomes-4-56-branchpoint
+    ensemblgenomes-5-58-branchpoint
+    ensemblgenomes-56-branchpoint
+    ensemblgenomes-6-59-branchpoint
+    ensemblgenomes-7-60-branchpoint
+    ensemblgenomes-8-61-branchpoint
+    ensemblgenomes-9-62-branchpoint
+    mergepoint-branch-ensembl-dec09-head
+    mergepoint-vega-38-dev-1
+    mergepoint-vega-38-dev-head-1
+    mergepoint-vega-44-dev-head-1
+    mergepoint-vega-46-dev-e48
+    mergepoint-vega-46-dev-head-1
+    mergepoint-vega-48dev_HEAD
+    mergepoint-vega-49-dev-head
+    start
+    tag-ensemblgenomes-16-69
+    tag-ensemblgenomes-18-71
+    tag-ensemblgenomes-19-72
+    tag-ensemblgenomes-20-73
+    vega-19-branchpoint
+    vega-2-branchpoint
+    vega-23-1-branchpoint
+    vega-23-2-branchpoint
+    vega-23-3-branchpoint
+    vega-23-4-branchpoint
+    vega-23-5-branchpoint
+    vega-26-1-branchpoint
+    vega-26-2-branchpoint
+    vega-26-dev-branchpoint
+    vega-28-1-branchpoint
+    vega-30-1-branchpoint
+    vega-30-3-branchpoint
+    vega-31-1-branchpoint
+    vega-31-branchpoint
+    vega-31-dev-branchpoint
+    vega-35-1-branchpoint
+    vega-35-dev-branchpoint
+    vega-37-dev-branchpoint
+    vega-38-1-branchpoint
+    vega-39-branchpoint
+    vega-40-1-branchpoint
+    vega-40-dev-branchpoint
+    vega-41-1-branchpoint
+    vega-41-branchpoint
+    vega-41-dev-branchpoint
+    vega-43-branchpoint
+    vega-43-dev-branchpoint
+    vega-44-2-branchpoint
+    vega-44-3-branchpoint
+    vega-44-branchpoint
+    vega-44-dev-branchpoint
+    vega-46-1-branchpoint
+    vega-46-3-branchpoint
+    vega-46-4-branchpoint
+    vega-46-dev-branchpoint
+    vega-48-dev-branchpoint
+    vega-49-1-branchpoint
+    vega-49-2-branchpoint
+    vega-49-3-branchpoint
+    vega-49-5-branchpoint
+    vega-49-dev-branchpoint
+    vega-55-1-branchpoint
+    vega-59-1-branchpoint
+    vega-61-1-branchpoint
+
+  branches:
+    branch-baseline
+    branch-compara-pipeline-dev-20a
+    branch-compara-tree-dev-27a
+    branch-eg-56
+    branch-ensembl-10
+    branch-ensembl-11
+    branch-ensembl-12
+    branch-ensembl-13
+    branch-ensembl-14
+    branch-ensembl-15
+    branch-ensembl-16
+    branch-ensembl-17
+    branch-ensembl-18
+    branch-ensembl-19
+    branch-ensembl-20
+    branch-ensembl-21
+    branch-ensembl-22
+    branch-ensembl-23
+    branch-ensembl-24
+    branch-ensembl-25
+    branch-ensembl-26
+    branch-ensembl-27
+    branch-ensembl-28
+    branch-ensembl-29
+    branch-ensembl-30
+    branch-ensembl-31
+    branch-ensembl-32
+    branch-ensembl-33
+    branch-ensembl-34
+    branch-ensembl-35
+    branch-ensembl-36
+    branch-ensembl-37
+    branch-ensembl-38
+    branch-ensembl-39
+    branch-ensembl-4
+    branch-ensembl-4-2
+    branch-ensembl-40
+    branch-ensembl-41
+    branch-ensembl-42
+    branch-ensembl-43
+    branch-ensembl-44
+    branch-ensembl-45
+    branch-ensembl-46
+    branch-ensembl-47
+    branch-ensembl-48
+    branch-ensembl-49
+    branch-ensembl-5
+    branch-ensembl-50
+    branch-ensembl-50-dev
+    branch-ensembl-51
+    branch-ensembl-52
+    branch-ensembl-53
+    branch-ensembl-54
+    branch-ensembl-55
+    branch-ensembl-56
+    branch-ensembl-57
+    branch-ensembl-58
+    branch-ensembl-59
+    branch-ensembl-6
+    branch-ensembl-60
+    branch-ensembl-61
+    branch-ensembl-62
+    branch-ensembl-63
+    branch-ensembl-64
+    branch-ensembl-65
+    branch-ensembl-66
+    branch-ensembl-67
+    branch-ensembl-68
+    branch-ensembl-69
+    branch-ensembl-7
+    branch-ensembl-70
+    branch-ensembl-71
+    branch-ensembl-72
+    branch-ensembl-73
+    branch-ensembl-74
+    branch-ensembl-8
+    branch-ensembl-9
+    branch-ensembl-dec09
+    branch-ensembl-magic
+    branch-ensemblgenomes-10-63
+    branch-ensemblgenomes-11-64
+    branch-ensemblgenomes-12-65
+    branch-ensemblgenomes-13-66
+    branch-ensemblgenomes-14-67
+    branch-ensemblgenomes-15-68
+    branch-ensemblgenomes-16-69
+    branch-ensemblgenomes-17-70
+    branch-ensemblgenomes-18-71
+    branch-ensemblgenomes-19-72
+    branch-ensemblgenomes-20-73
+    branch-ensemblgenomes-4-56
+    branch-ensemblgenomes-5-58
+    branch-ensemblgenomes-56
+    branch-ensemblgenomes-6-59
+    branch-ensemblgenomes-7-60
+    branch-ensemblgenomes-8-61
+    branch-ensemblgenomes-9-62
+    branch-gen_malign
+    branch-new-seqstore
+    branch-registry
+    branch-vega-10
+    branch-vega-19
+    branch-vega-23-1
+    branch-vega-23-2
+    branch-vega-23-3
+    branch-vega-23-4
+    branch-vega-23-5
+    branch-vega-23-dev
+    branch-vega-26-1
+    branch-vega-26-2
+    branch-vega-26-dev
+    branch-vega-28-1
+    branch-vega-28-dev
+    branch-vega-30-1
+    branch-vega-30-2
+    branch-vega-30-3
+    branch-vega-30-dev
+    branch-vega-31
+    branch-vega-31-1
+    branch-vega-31-dev
+    branch-vega-35-1
+    branch-vega-35-dev
+    branch-vega-37-1
+    branch-vega-37-2
+    branch-vega-37-dev
+    branch-vega-38-1
+    branch-vega-38-dev
+    branch-vega-39
+    branch-vega-39-dev
+    branch-vega-40-1
+    branch-vega-40-dev
+    branch-vega-41
+    branch-vega-41-1
+    branch-vega-41-dev
+    branch-vega-43
+    branch-vega-43-dev
+    branch-vega-44
+    branch-vega-44-2
+    branch-vega-44-3
+    branch-vega-44-dev
+    branch-vega-46-1
+    branch-vega-46-3
+    branch-vega-46-4
+    branch-vega-46-dev
+    branch-vega-48-dev
+    branch-vega-49-1
+    branch-vega-49-2
+    branch-vega-49-3
+    branch-vega-49-5
+    branch-vega-49-dev
+    branch-vega-55-1
+    branch-vega-59-1
+    branch-vega-61-1
+    compara-family-merge
+    compara-hive-dev2
+    genebuild_projection
+    projection_genebuild_2010_05
+    projection_genebuild_2011_07
+
+
+HEAD is now at 5e0b03a Fixed bug when restricting the end of the cigar_line.
+HEAD is now at 1b1149d removed deleteObj call
+HEAD is now at 29565b2 can't use instance variable to control global_clean method (global scope so no $self)
+HEAD is now at 7a846bd Adding/merging family/domain/homology scripts from branch compara-family-merge to main trunk
+HEAD is now at 11e6381 use 2 to define dbname etc in one place
+HEAD is now at 344425d vega 51
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 18a71dd missing ,
+HEAD is now at 7b81619 Reverting changes of code back to their original branched version (this was the first edit for all files). Changes will have to go at a later date but it will be used "offline"
+HEAD is now at 4089a6f fixed adaptor attaching in fetch_all
+HEAD is now at e399986 fixed same-species synteny Fex
+HEAD is now at 0a042f6 case-insensitive caching
+HEAD is now at 039dfd2 Fixed hopefully last bug after code cleaning
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+HEAD is now at 7a55a2c Small fixes to synteny code and some changes to allow it to work for
+HEAD is now at 2ce7348 update
+HEAD is now at a92896f  comment warn
+HEAD is now at 544b540 Modified dn,ds and dnds_ratio methods to filter systematically on the ds value given a hard-coded threshold. I'll make sure that for the next release, i.e. feb 2004, either we decide not to store the not-trustable data or store the ds threshold in compara. Added also get_4D_SimpleAlign method just to obtain alignment on the 3rd base of 4-fold codons
+HEAD is now at 2856d92 removed really annoying warn
+HEAD is now at 5d236a6 merging compara_hive_dev2 into the head.
+HEAD is now at 2ae72d6 fixed
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 43c2e0e added DnaFragChuckAdaptor
+HEAD is now at 1f84adf made Bio::EnsEMBL::Root objects so error throws do not die
+HEAD is now at a88192c added direct 'insert ignore into method_link ...' of BLASTZ_RAW so that the
+HEAD is now at 297897f set default hive_capacity for blastz template to 800
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at df169be Added: -top_level flag to dump only the seq_regions of a given coordinate system which are top_level.
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at de00553 added STDOUT print of root_id of the set of all the clusters generated by
+HEAD is now at 6b379fb Fix POD
+HEAD is now at 8999d20 - clump genomic regions in order to speed up the comparisons.
+HEAD is now at e2fafa9 Added: status and biotype attributes to the aligned Bio::EnsEMBL::Gene objects.
+HEAD is now at 830524f added UNIQUE tag_node_id (node_id, tag_id); to protein_tree_tags table
+HEAD is now at cc4ef15 Disable the setting of the dbID when storing a new GenomicAlign (i.e. a GenomicAlign with no dbID) between method_link_species_set*10^10 and (method_link_species_set+1)*10^10 by default. Default behaviour relies on the AUTO_INCREMENT feature again.
+HEAD is now at 43b195c Documentation update
+HEAD is now at ebe2956 Updated the pod documentation
+HEAD is now at c0945a7 Trying to clarify code. Adding variables setting via options in command lines.
+HEAD is now at f1352e3 Added method fetch_align_name_by_align_id. Modify get_AlignBlockSet to retrieve cigar_line
+HEAD is now at bdb78d9 This commit was manufactured by cvs2svn to create tag
+HEAD is now at f294e8f added a function to get a max distance from a node to a leaf
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 7cb4a06 Notes on debugging strategies
+HEAD is now at e87e383 yet another extra formats for printing newick files -- njtree and ncbi-related
+HEAD is now at 9b79b95 Fix bug in get_SimpleAlign method when there is no reference GenomicAlign.
+HEAD is now at 46c3579 Update for release 45
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 9f8d27a updated for v48
+HEAD is now at 7312914 two anchor tables for the EPO pipeline added
+HEAD is now at 5b0b051 added Ewan's tables to the branch. Only :-) 18 tables here
+HEAD is now at 66ed129 Keep the tree when getting underlying slices (for ancestral sequences only)
+HEAD is now at 71a7c4e Undo previous changes
+HEAD is now at 26372b3 v52
+HEAD is now at f711e00 Changed regexp for method_link_class to be GenomicAlignTree instead of tree_alignment
+HEAD is now at c4b320b *** empty log message ***
+HEAD is now at 09f09bf Added temporary fix to problem in core when masking haplotypes because the assembly mapper is cached
+HEAD is now at a1efea7 reinclude cigar_line calculation when no_between option is defined
+HEAD is now at b51c1c7 loads RFAM models from ftp site into nctree pipeline db -- nctree pipeline -- Albert Vilella
+HEAD is now at e41cfcf update
+HEAD is now at ea86983 moved to PipeConfig and changed accordingly
+HEAD is now at 3799667 skips alignment seqs consisting of just "-" and/or "."
+HEAD is now at a55b09a Switched order of statements in DESTROY so that the db is disconnected
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at 435a841 Small bug fixes and changes
+HEAD is now at 09daec9 Renamed analysis create_species_tree to make_species_tree and changed it to use the new MakeSpeciesTree Runnable
+HEAD is now at 4ae8835 removed some unused and deprecated functions
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at ab33a9b This commit was manufactured by cvs2svn to create tag
+HEAD is now at 9597a22 inherit attach() from the BaseAdaptor
+HEAD is now at 01e0063 Added an option to read branch lengths from the gene trees
+HEAD is now at d356032 Added death date for deprecated methods
+HEAD is now at 1b1149d removed deleteObj call
+HEAD is now at 438ec79 typo
+HEAD is now at 1f5c3aa Added missing semi-colons
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 7fd1bdb pairwise alignment diagram was missing
+HEAD is now at a504ee0 Added the Apache 2.0 license header
+HEAD is now at e8c630f Added in docs and code for dumping and creating synteny blocks.
+HEAD is now at 838468c fillcompgap.pl use ComparaConf.pl. Update ComparaConf.pl.example
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 09daec9 Renamed analysis create_species_tree to make_species_tree and changed it to use the new MakeSpeciesTree Runnable
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at ea86983 moved to PipeConfig and changed accordingly
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at a273886 Poor documentation improved
+HEAD is now at 9b742f1 call corrected fetch_by_Member_id_Member_id
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at ec7fc3f Added error check for valid genome_db_id
+HEAD is now at 5b12bc2 Allow to dump GenomicAlignTrees
+HEAD is now at 5b12bc2 Allow to dump GenomicAlignTrees
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at 98dbd69 This commit was manufactured by cvs2svn to create tag 'mergepoint-vega-49
+HEAD is now at f64ecb0 new comparative db - basically moved genomic align stuff from ensemlb here. Will improve
+HEAD is now at c961454 Added "need_cds_seq" parameter
+HEAD is now at a082d55 Fix Licence header
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 0938646 BioPerl can natively write alignments in stockholm format. No need to use "sreformat"
+HEAD is now at b5bddde included database port number on command line and compara DBAdaptor call. Also added alignment type option
+HEAD is now at e399986 fixed same-species synteny Fex
+HEAD is now at c3f26d3 Changed the way PAFs are ranked and BRHs pulled to deal with the fact that
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at f482bc7 takes a chr argument to interpolate_best_location
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at 768ac28 phyml can't build trees unless there are >2 sequences as input.  added code
+HEAD is now at b7ff380 added method: parent_link
+HEAD is now at b7ff380 added method: parent_link
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 9c1900e merge of Javier code from the HEAD
+HEAD is now at 848aaea changed print STDERR to warn
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at fedba96 remove warn (on vega branch)
+HEAD is now at 01e5561 Fix bug: previous fix broke the compara tracks on contig view. Now uses reference_slice when available (contig view) and consensus coordinates otherwise (alignview)
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 9b79b95 Fix bug in get_SimpleAlign method when there is no reference GenomicAlign.
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at d26a277 merge from vega-46-4
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at f700a55 very bad hack for vega only
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at 55ab9d9 adding stable_id method in v55 branch
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at e8c630f Added in docs and code for dumping and creating synteny blocks.
+HEAD is now at 84dfb84 changed definitions in config file
+HEAD is now at 2e83883 simple script to test the tree system by creating a taxon tree.  stores and
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at 95473a8 add score to the output
+HEAD is now at a602eca Delete a warn message from HomologyAdaptor
+HEAD is now at 417d2ce corrected a few typos
+HEAD is now at 039dfd2 Fixed hopefully last bug after code cleaning
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+HEAD is now at 7a55a2c Small fixes to synteny code and some changes to allow it to work for
+HEAD is now at 2ce7348 update
+HEAD is now at 64ee988 fix from Steven Roels: coordinates were incorrect for negative strand slices in fetch_all_by_Slice
+HEAD is now at b5bddde included database port number on command line and compara DBAdaptor call. Also added alignment type option
+HEAD is now at 68d6968 removed shout
+HEAD is now at 7559570 removed table extensions planned for release 22 that accidentally were
+HEAD is now at d43ee8a Added a constraint in fetch_by_Member_paired_species
+HEAD is now at 2c14e36 removed print
+HEAD is now at f612f85 Made it a bit more generic
+HEAD is now at 62f0c7a Updated for schema 25.1
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at b39ce2c patch for MLSS table in compara release 27
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at 221f4ba Fix BUG: in fetch_all_by_MethodLinkSpeciesSet_Slice() when top_level seq_region is not in compara
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at c737cb7 changed use Data::UUID to
+HEAD is now at ab71645 Reorder methods
+HEAD is now at 8999d20 - clump genomic regions in order to speed up the comparisons.
+HEAD is now at 76916f6 updated for ciona pre
+HEAD is now at 830524f added UNIQUE tag_node_id (node_id, tag_id); to protein_tree_tags table
+HEAD is now at b2ab369 fix the schema_version in the meta table
+HEAD is now at 2fbccb4 fixing some perldoc lines that must have been left from a copy paste
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 5b0b051 added Ewan's tables to the branch. Only :-) 18 tables here
+HEAD is now at b70160c Fixed bug. Now code consider compara dna/dna data as symetric ie you can query from human->mouse or from mouse->human
+HEAD is now at 848aaea changed print STDERR to warn
+HEAD is now at 86fa5fe Corrected some method call that are only in the head code and due to be released in branch-ensembl-42
+HEAD is now at c4f100a Fix nasty warning message when score is NULL for this block
+HEAD is now at 01e5561 Fix bug: previous fix broke the compara tracks on contig view. Now uses reference_slice when available (contig view) and consensus coordinates otherwise (alignview)
+HEAD is now at 9b79b95 Fix bug in get_SimpleAlign method when there is no reference GenomicAlign.
+HEAD is now at f8a154c Fix bug: ignoring overlapping alignments was not working properly if more than 2 overlapping alignments were found
+HEAD is now at c7c0fa5 ignore short (<10aa) translations
+HEAD is now at 5720f05 add method get_all_Members
+HEAD is now at d26a277 merge from vega-46-4
+HEAD is now at f033dcd Fix end loop condition
+HEAD is now at 44a12ff Added fetch_homologues_by_chr_start_in_species - retrieves N genes in order from the given start position, along with the corresponding homologues.  Probably never going to use this now...
+HEAD is now at b54f3a2 Undo previous changes. Merge from HEAD
+HEAD is now at 60a3516 allow for stop codon
+HEAD is now at 4fc8398 
+HEAD is now at eea57c8 changes undone
+HEAD is now at 530c90d Added AnchorSeqAdaptor and AnchorAlignAdaptor.
+HEAD is now at d68ba28 adding sequence_exon_bounded to branch-54
+HEAD is now at 3896ec70 Improved logic for searching by Member_root_id allowing the user to set the clusterset_id usage off if required
+HEAD is now at 10f9020 fix the check for genome names with / wo underscores
+HEAD is now at 8a4dd29 fetch_by_Member_root_id expects a peptide_member, so it should call gene_member_id in gene_member_id_is_in_tree method
+HEAD is now at 7e15133 Added new fetch_all_by_Slice method.
+HEAD is now at 91a9ee8 added argument to restrict the optimal cut point this distance from either end of the sequence
+HEAD is now at 1b1149d removed deleteObj call
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at 96d3b64 Poor documentation improved
+HEAD is now at 0d4a1b3 Backported change to allow usage of standaloneJob.pl
+HEAD is now at efaf31b slice_mapper_pairs is now initialised to an empty array and therefore need to check for empty array instead of undef.
+HEAD is now at 7ec4420 Now able to print the current species tree
+HEAD is now at 168e8aa commented out warning as $this_genomic_align_block->node_id method no longer exists
+HEAD is now at 990ebc3 updated method calls from
+HEAD is now at f98b11e a method call to alignment_segments now works for ce objects generated from
+HEAD is now at 3b77f62 Creates additional clustersets in HMMClusterize
+HEAD is now at 1b1149d removed deleteObj call
+HEAD is now at 77cd6f6 Rename DnaFragAdaptor->fetch_by_synteny_region_id() to DnaFragAdaptor->fetch_all_by_synteny_region_id()
+HEAD is now at 1d731a9 Updated workshop material after the last workshop (e71)
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 2cbc3b4 updates for Vega 54 run on farm3
+HEAD is now at dd7cde8 Not all the homologies have a species_tree_node_id
+HEAD is now at e8c630f Added in docs and code for dumping and creating synteny blocks.
+HEAD is now at da6615b fixed 1; porblems
+HEAD is now at e41cfcf update
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 09daec9 Renamed analysis create_species_tree to make_species_tree and changed it to use the new MakeSpeciesTree Runnable
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 7209c8b Bug caused by a typo
+HEAD is now at b1324c4 ProjectOntologyXref.pm
+HEAD is now at 8caa268 Updated the Compara species tree and the related documentation
+HEAD is now at c961454 Added "need_cds_seq" parameter
+HEAD is now at 344425d vega 51
+HEAD is now at a082d55 Fix Licence header
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 0938646 BioPerl can natively write alignments in stockholm format. No need to use "sreformat"
+HEAD is now at 7a2033a Adding engine support
+HEAD is now at ea86983 moved to PipeConfig and changed accordingly
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at a273886 Poor documentation improved
+HEAD is now at 1ee64f6 Merge branch-gen_malign into main trunk.
+HEAD is now at 7a846bd Adding/merging family/domain/homology scripts from branch compara-family-merge to main trunk
+HEAD is now at 0e18ab3 DBAdaptor not DBConnection should now be used in the sanity test
+HEAD is now at e399986 fixed same-species synteny Fex
+HEAD is now at b5bddde included database port number on command line and compara DBAdaptor call. Also added alignment type option
+HEAD is now at c3f26d3 Changed the way PAFs are ranked and BRHs pulled to deal with the fact that
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at 987ee9b switched off Data::UUID
+HEAD is now at f482bc7 takes a chr argument to interpolate_best_location
+HEAD is now at b7ff380 added method: parent_link
+HEAD is now at 41cf2b5 copes with (Vega) translations where CDS start > CDs end
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 9c1900e merge of Javier code from the HEAD
+HEAD is now at 9c1900e merge of Javier code from the HEAD
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at fedba96 remove warn (on vega branch)
+HEAD is now at fedba96 remove warn (on vega branch)
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at f2b2b72 ignore short (<10aa) translations
+HEAD is now at d26a277 merge from vega-46-4
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at f700a55 very bad hack for vega only
+HEAD is now at f700a55 very bad hack for vega only
+HEAD is now at 55ab9d9 adding stable_id method in v55 branch
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at f7c0f26 Import gene_relationship data from old schema 16,17 to new homology-related tables
+HEAD is now at ac8dcfc consolidated hive tables into hive-tables.sql
+HEAD is now at f2bc446 WGA/Projection used for CHIMP2.1.4
+HEAD is now at 009ab7e print's removed
+HEAD is now at 19413ca previously missing from the branch
+Create tag cvs/baseline-branchpoint;    Deleted tag 'baseline-branchpoint' (was 1b1149d)
+Create tag cvs/blastz-pipeline_1beta;   Deleted tag 'blastz-pipeline_1beta' (was 29565b2)
+Create tag cvs/bp-branch-new-seqstore;  Deleted tag 'bp-branch-new-seqstore' (was 7a846bd)
+Create tag cvs/branch-1000genomes-13-69;        Deleted tag 'branch-1000genomes-13-69' (was 11e6381)
+Create tag cvs/branch-ensemblgenomes-17-70-branchpoint;         Deleted tag 'branch-ensemblgenomes-17-70-branchpoint' (was 344425d)
+Create tag cvs/branchpoint-vega-37-1;   Deleted tag 'branchpoint-vega-37-1' (was 33d5c8d)
+Create tag cvs/branchpoint-vega-37-2;   Deleted tag 'branchpoint-vega-37-2' (was 33d5c8d)
+Create tag cvs/branchpoint-vega-38-dev;         Deleted tag 'branchpoint-vega-38-dev' (was 5f13338)
+Create tag cvs/branchpoint-vega-39-dev;         Deleted tag 'branchpoint-vega-39-dev' (was 3edb0d7)
+Create tag cvs/compara-hive-dev;        Deleted tag 'compara-hive-dev' (was 18a71dd)
+Create tag cvs/eg-56-branchpoint;       Deleted tag 'eg-56-branchpoint' (was 7b81619)
+Create tag cvs/ensembl-10-branchpoint;  Deleted tag 'ensembl-10-branchpoint' (was 4089a6f)
+Create tag cvs/ensembl-11-branchpoint;  Deleted tag 'ensembl-11-branchpoint' (was e399986)
+Create tag cvs/ensembl-12-branchpoint;  Deleted tag 'ensembl-12-branchpoint' (was 0a042f6)
+Create tag cvs/ensembl-13-branchpoint;  Deleted tag 'ensembl-13-branchpoint' (was 039dfd2)
+Create tag cvs/ensembl-14-branchpoint;  Deleted tag 'ensembl-14-branchpoint' (was 5ca27dd)
+Create tag cvs/ensembl-15-branchpoint;  Deleted tag 'ensembl-15-branchpoint' (was 5ca27dd)
+Create tag cvs/ensembl-16-branchpoint;  Deleted tag 'ensembl-16-branchpoint' (was 7a55a2c)
+Create tag cvs/ensembl-17-branchpoint;  Deleted tag 'ensembl-17-branchpoint' (was 2ce7348)
+Create tag cvs/ensembl-18-branchpoint;  Deleted tag 'ensembl-18-branchpoint' (was a92896f)
+Create tag cvs/ensembl-19-branchpoint;  Deleted tag 'ensembl-19-branchpoint' (was 544b540)
+Create tag cvs/ensembl-20-branchpoint;  Deleted tag 'ensembl-20-branchpoint' (was 2856d92)
+Create tag cvs/ensembl-21-branchpoint;  Deleted tag 'ensembl-21-branchpoint' (was 5d236a6)
+Create tag cvs/ensembl-22-branchpoint;  Deleted tag 'ensembl-22-branchpoint' (was 2ae72d6)
+Create tag cvs/ensembl-23-branchpoint;  Deleted tag 'ensembl-23-branchpoint' (was 1f365c5)
+Create tag cvs/ensembl-24-branchpoint;  Deleted tag 'ensembl-24-branchpoint' (was 43c2e0e)
+Create tag cvs/ensembl-25-branchpoint;  Deleted tag 'ensembl-25-branchpoint' (was 1f84adf)
+Create tag cvs/ensembl-26-branchpoint;  Deleted tag 'ensembl-26-branchpoint' (was a88192c)
+Create tag cvs/ensembl-27-branchpoint;  Deleted tag 'ensembl-27-branchpoint' (was 297897f)
+Create tag cvs/ensembl-28-branchpoint;  Deleted tag 'ensembl-28-branchpoint' (was 0893b20)
+Create tag cvs/ensembl-29-branchpoint;  Deleted tag 'ensembl-29-branchpoint' (was df169be)
+Create tag cvs/ensembl-30-branchpoint;  Deleted tag 'ensembl-30-branchpoint' (was dead065)
+Create tag cvs/ensembl-31-branchpoint;  Deleted tag 'ensembl-31-branchpoint' (was de00553)
+Create tag cvs/ensembl-32-branchpoint;  Deleted tag 'ensembl-32-branchpoint' (was 6b379fb)
+Create tag cvs/ensembl-33-branchpoint;  Deleted tag 'ensembl-33-branchpoint' (was 8999d20)
+Create tag cvs/ensembl-34-branchpoint;  Deleted tag 'ensembl-34-branchpoint' (was e2fafa9)
+Create tag cvs/ensembl-35-branchpoint;  Deleted tag 'ensembl-35-branchpoint' (was 830524f)
+Create tag cvs/ensembl-36-branchpoint;  Deleted tag 'ensembl-36-branchpoint' (was cc4ef15)
+Create tag cvs/ensembl-37-branchpoint;  Deleted tag 'ensembl-37-branchpoint' (was 43b195c)
+Create tag cvs/ensembl-39-branchpoint;  Deleted tag 'ensembl-39-branchpoint' (was ebe2956)
+Create tag cvs/ensembl-4-1-branchpoint;         Deleted tag 'ensembl-4-1-branchpoint' (was c0945a7)
+Create tag cvs/ensembl-4-2-branchpoint;         Deleted tag 'ensembl-4-2-branchpoint' (was f1352e3)
+Create tag cvs/ensembl-4-branchpoint;   Deleted tag 'ensembl-4-branchpoint' (was bdb78d9)
+Create tag cvs/ensembl-40-branchpoint;  Deleted tag 'ensembl-40-branchpoint' (was f294e8f)
+Create tag cvs/ensembl-41-branchpoint;  Deleted tag 'ensembl-41-branchpoint' (was 9868bc9)
+Create tag cvs/ensembl-42-branchpoint;  Deleted tag 'ensembl-42-branchpoint' (was 7cb4a06)
+Create tag cvs/ensembl-43-branchpoint;  Deleted tag 'ensembl-43-branchpoint' (was e87e383)
+Create tag cvs/ensembl-44-branchpoint;  Deleted tag 'ensembl-44-branchpoint' (was 9b79b95)
+Create tag cvs/ensembl-45-branchpoint;  Deleted tag 'ensembl-45-branchpoint' (was 46c3579)
+Create tag cvs/ensembl-46-branchpoint;  Deleted tag 'ensembl-46-branchpoint' (was 9b66908)
+Create tag cvs/ensembl-47-branchpoint;  Deleted tag 'ensembl-47-branchpoint' (was 5980ff8)
+Create tag cvs/ensembl-47-mergepoint-1;         Deleted tag 'ensembl-47-mergepoint-1' (was 5980ff8)
+Create tag cvs/ensembl-47-mp-1;         Deleted tag 'ensembl-47-mp-1' (was 5980ff8)
+Create tag cvs/ensembl-48-branchpoint;  Deleted tag 'ensembl-48-branchpoint' (was 9f8d27a)
+Create tag cvs/ensembl-49-branchpoint;  Deleted tag 'ensembl-49-branchpoint' (was 7312914)
+Create tag cvs/ensembl-5-branchpoint;   Deleted tag 'ensembl-5-branchpoint' (was 5b0b051)
+Create tag cvs/ensembl-50-branchpoint;  Deleted tag 'ensembl-50-branchpoint' (was 66ed129)
+Create tag cvs/ensembl-51-branchpoint;  Deleted tag 'ensembl-51-branchpoint' (was 71a7c4e)
+Create tag cvs/ensembl-52-branchpoint;  Deleted tag 'ensembl-52-branchpoint' (was 26372b3)
+Create tag cvs/ensembl-53-branchpoint;  Deleted tag 'ensembl-53-branchpoint' (was f711e00)
+Create tag cvs/ensembl-54-branchpoint;  Deleted tag 'ensembl-54-branchpoint' (was c4b320b)
+Create tag cvs/ensembl-55-branchpoint;  Deleted tag 'ensembl-55-branchpoint' (was 09f09bf)
+Create tag cvs/ensembl-56-branchpoint;  Deleted tag 'ensembl-56-branchpoint' (was a1efea7)
+Create tag cvs/ensembl-57-2-branchpoint;        Deleted tag 'ensembl-57-2-branchpoint' (was b51c1c7)
+Create tag cvs/ensembl-57-branchpoint;  Deleted tag 'ensembl-57-branchpoint' (was e41cfcf)
+Create tag cvs/ensembl-58-branchpoint;  Deleted tag 'ensembl-58-branchpoint' (was ea86983)
+Create tag cvs/ensembl-59-branchpoint;  Deleted tag 'ensembl-59-branchpoint' (was 3799667)
+Create tag cvs/ensembl-6-branchpoint;   Deleted tag 'ensembl-6-branchpoint' (was a55b09a)
+Create tag cvs/ensembl-60-branchpoint;  Deleted tag 'ensembl-60-branchpoint' (was ba1d58b)
+Create tag cvs/ensembl-61-branchpoint;  Deleted tag 'ensembl-61-branchpoint' (was e439a4f)
+Create tag cvs/ensembl-62-branchpoint;  Deleted tag 'ensembl-62-branchpoint' (was 435a841)
+Create tag cvs/ensembl-63-branchpoint;  Deleted tag 'ensembl-63-branchpoint' (was 09daec9)
+Create tag cvs/ensembl-64-branchpoint;  Deleted tag 'ensembl-64-branchpoint' (was 4ae8835)
+Create tag cvs/ensembl-65-branchpoint;  Deleted tag 'ensembl-65-branchpoint' (was 74ff1d1)
+Create tag cvs/ensembl-66-branchpoint;  Deleted tag 'ensembl-66-branchpoint' (was ab33a9b)
+Create tag cvs/ensembl-67-branchpoint;  Deleted tag 'ensembl-67-branchpoint' (was 9597a22)
+Create tag cvs/ensembl-68-branchpoint;  Deleted tag 'ensembl-68-branchpoint' (was 01e0063)
+Create tag cvs/ensembl-69-branchpoint;  Deleted tag 'ensembl-69-branchpoint' (was d356032)
+Create tag cvs/ensembl-7-branchpoint;   Deleted tag 'ensembl-7-branchpoint' (was 1b1149d)
+Create tag cvs/ensembl-70-branchpoint;  Deleted tag 'ensembl-70-branchpoint' (was 438ec79)
+Create tag cvs/ensembl-71-branchpoint;  Deleted tag 'ensembl-71-branchpoint' (was 1f5c3aa)
+Create tag cvs/ensembl-72-branchpoint;  Deleted tag 'ensembl-72-branchpoint' (was 16b5d6e)
+Create tag cvs/ensembl-73-branchpoint;  Deleted tag 'ensembl-73-branchpoint' (was 7fd1bdb)
+Create tag cvs/ensembl-74-branchpoint;  Deleted tag 'ensembl-74-branchpoint' (was a504ee0)
+Create tag cvs/ensembl-8-branchpoint;   Deleted tag 'ensembl-8-branchpoint' (was e8c630f)
+Create tag cvs/ensembl-9-branchpoint;   Deleted tag 'ensembl-9-branchpoint' (was 838468c)
+Create tag cvs/ensembl-branchpoint-38;  Deleted tag 'ensembl-branchpoint-38' (was 5f13338)
+Create tag cvs/ensembl-magic-branchpoint;       Deleted tag 'ensembl-magic-branchpoint' (was 5980ff8)
+Create tag cvs/ensemblgenomes-10-63-branchpoint;        Deleted tag 'ensemblgenomes-10-63-branchpoint' (was 09daec9)
+Create tag cvs/ensemblgenomes-11-64-branchpoint;        Deleted tag 'ensemblgenomes-11-64-branchpoint' (was 74ff1d1)
+Create tag cvs/ensemblgenomes-12-65-branchpoint;        Deleted tag 'ensemblgenomes-12-65-branchpoint' (was 74ff1d1)
+Create tag cvs/ensemblgenomes-4-56-branchpoint;         Deleted tag 'ensemblgenomes-4-56-branchpoint' (was 060d370)
+Create tag cvs/ensemblgenomes-5-58-branchpoint;         Deleted tag 'ensemblgenomes-5-58-branchpoint' (was ea86983)
+Create tag cvs/ensemblgenomes-56-branchpoint;   Deleted tag 'ensemblgenomes-56-branchpoint' (was 060d370)
+Create tag cvs/ensemblgenomes-6-59-branchpoint;         Deleted tag 'ensemblgenomes-6-59-branchpoint' (was 0b70cdb)
+Create tag cvs/ensemblgenomes-7-60-branchpoint;         Deleted tag 'ensemblgenomes-7-60-branchpoint' (was ba1d58b)
+Create tag cvs/ensemblgenomes-8-61-branchpoint;         Deleted tag 'ensemblgenomes-8-61-branchpoint' (was e439a4f)
+Create tag cvs/ensemblgenomes-9-62-branchpoint;         Deleted tag 'ensemblgenomes-9-62-branchpoint' (was a273886)
+Create tag cvs/mergepoint-branch-ensembl-dec09-head;    Deleted tag 'mergepoint-branch-ensembl-dec09-head' (was 9b742f1)
+Create tag cvs/mergepoint-vega-38-dev-1;        Deleted tag 'mergepoint-vega-38-dev-1' (was 33d5c8d)
+Create tag cvs/mergepoint-vega-38-dev-head-1;   Deleted tag 'mergepoint-vega-38-dev-head-1' (was 5f13338)
+Create tag cvs/mergepoint-vega-44-dev-head-1;   Deleted tag 'mergepoint-vega-44-dev-head-1' (was ec7fc3f)
+Create tag cvs/mergepoint-vega-46-dev-e48;      Deleted tag 'mergepoint-vega-46-dev-e48' (was 5b12bc2)
+Create tag cvs/mergepoint-vega-46-dev-head-1;   Deleted tag 'mergepoint-vega-46-dev-head-1' (was 5b12bc2)
+Create tag cvs/mergepoint-vega-48dev_HEAD;      Deleted tag 'mergepoint-vega-48dev_HEAD' (was b60fd97)
+Create tag cvs/mergepoint-vega-49-dev-head;     Deleted tag 'mergepoint-vega-49-dev-head' (was 98dbd69)
+Create tag cvs/start;   Deleted tag 'start' (was f64ecb0)
+Create tag cvs/tag-ensemblgenomes-16-69;        Deleted tag 'tag-ensemblgenomes-16-69' (was c961454)
+Create tag cvs/tag-ensemblgenomes-18-71;        Deleted tag 'tag-ensemblgenomes-18-71' (was a082d55)
+Create tag cvs/tag-ensemblgenomes-19-72;        Deleted tag 'tag-ensemblgenomes-19-72' (was 16b5d6e)
+Create tag cvs/tag-ensemblgenomes-20-73;        Deleted tag 'tag-ensemblgenomes-20-73' (was 0938646)
+Create tag cvs/vega-19-branchpoint;     Deleted tag 'vega-19-branchpoint' (was b5bddde)
+Create tag cvs/vega-2-branchpoint;      Deleted tag 'vega-2-branchpoint' (was e399986)
+Create tag cvs/vega-23-1-branchpoint;   Deleted tag 'vega-23-1-branchpoint' (was c3f26d3)
+Create tag cvs/vega-23-2-branchpoint;   Deleted tag 'vega-23-2-branchpoint' (was 1f365c5)
+Create tag cvs/vega-23-3-branchpoint;   Deleted tag 'vega-23-3-branchpoint' (was 1f365c5)
+Create tag cvs/vega-23-4-branchpoint;   Deleted tag 'vega-23-4-branchpoint' (was 1f365c5)
+Create tag cvs/vega-23-5-branchpoint;   Deleted tag 'vega-23-5-branchpoint' (was 1f365c5)
+Create tag cvs/vega-26-1-branchpoint;   Deleted tag 'vega-26-1-branchpoint' (was 1b691c7)
+Create tag cvs/vega-26-2-branchpoint;   Deleted tag 'vega-26-2-branchpoint' (was 1b691c7)
+Create tag cvs/vega-26-dev-branchpoint;         Deleted tag 'vega-26-dev-branchpoint' (was 1b691c7)
+Create tag cvs/vega-28-1-branchpoint;   Deleted tag 'vega-28-1-branchpoint' (was 0893b20)
+Create tag cvs/vega-30-1-branchpoint;   Deleted tag 'vega-30-1-branchpoint' (was dead065)
+Create tag cvs/vega-30-3-branchpoint;   Deleted tag 'vega-30-3-branchpoint' (was dead065)
+Create tag cvs/vega-31-1-branchpoint;   Deleted tag 'vega-31-1-branchpoint' (was f482bc7)
+Create tag cvs/vega-31-branchpoint;     Deleted tag 'vega-31-branchpoint' (was dead065)
+Create tag cvs/vega-31-dev-branchpoint;         Deleted tag 'vega-31-dev-branchpoint' (was 768ac28)
+Create tag cvs/vega-35-1-branchpoint;   Deleted tag 'vega-35-1-branchpoint' (was b7ff380)
+Create tag cvs/vega-35-dev-branchpoint;         Deleted tag 'vega-35-dev-branchpoint' (was b7ff380)
+Create tag cvs/vega-37-dev-branchpoint;         Deleted tag 'vega-37-dev-branchpoint' (was 33d5c8d)
+Create tag cvs/vega-38-1-branchpoint;   Deleted tag 'vega-38-1-branchpoint' (was 5f13338)
+Create tag cvs/vega-39-branchpoint;     Deleted tag 'vega-39-branchpoint' (was 3edb0d7)
+Create tag cvs/vega-40-1-branchpoint;   Deleted tag 'vega-40-1-branchpoint' (was 9c1900e)
+Create tag cvs/vega-40-dev-branchpoint;         Deleted tag 'vega-40-dev-branchpoint' (was 848aaea)
+Create tag cvs/vega-41-1-branchpoint;   Deleted tag 'vega-41-1-branchpoint' (was 9868bc9)
+Create tag cvs/vega-41-branchpoint;     Deleted tag 'vega-41-branchpoint' (was 9868bc9)
+Create tag cvs/vega-41-dev-branchpoint;         Deleted tag 'vega-41-dev-branchpoint' (was 9868bc9)
+Create tag cvs/vega-43-branchpoint;     Deleted tag 'vega-43-branchpoint' (was fedba96)
+Create tag cvs/vega-43-dev-branchpoint;         Deleted tag 'vega-43-dev-branchpoint' (was 01e5561)
+Create tag cvs/vega-44-2-branchpoint;   Deleted tag 'vega-44-2-branchpoint' (was 969baef)
+Create tag cvs/vega-44-3-branchpoint;   Deleted tag 'vega-44-3-branchpoint' (was 969baef)
+Create tag cvs/vega-44-branchpoint;     Deleted tag 'vega-44-branchpoint' (was 969baef)
+Create tag cvs/vega-44-dev-branchpoint;         Deleted tag 'vega-44-dev-branchpoint' (was 9b79b95)
+Create tag cvs/vega-46-1-branchpoint;   Deleted tag 'vega-46-1-branchpoint' (was 9b66908)
+Create tag cvs/vega-46-3-branchpoint;   Deleted tag 'vega-46-3-branchpoint' (was 9b66908)
+Create tag cvs/vega-46-4-branchpoint;   Deleted tag 'vega-46-4-branchpoint' (was 9b66908)
+Create tag cvs/vega-46-dev-branchpoint;         Deleted tag 'vega-46-dev-branchpoint' (was 9b66908)
+Create tag cvs/vega-48-dev-branchpoint;         Deleted tag 'vega-48-dev-branchpoint' (was d26a277)
+Create tag cvs/vega-49-1-branchpoint;   Deleted tag 'vega-49-1-branchpoint' (was b60fd97)
+Create tag cvs/vega-49-2-branchpoint;   Deleted tag 'vega-49-2-branchpoint' (was b525ccb)
+Create tag cvs/vega-49-3-branchpoint;   Deleted tag 'vega-49-3-branchpoint' (was b525ccb)
+Create tag cvs/vega-49-5-branchpoint;   Deleted tag 'vega-49-5-branchpoint' (was f700a55)
+Create tag cvs/vega-49-dev-branchpoint;         Deleted tag 'vega-49-dev-branchpoint' (was b60fd97)
+Create tag cvs/vega-55-1-branchpoint;   Deleted tag 'vega-55-1-branchpoint' (was 55ab9d9)
+Create tag cvs/vega-59-1-branchpoint;   Deleted tag 'vega-59-1-branchpoint' (was 0b70cdb)
+Create tag cvs/vega-61-1-branchpoint;   Deleted tag 'vega-61-1-branchpoint' (was e439a4f)
+Deleted branch _diff_to_cvs (was 19413ca).
+Counting objects: 63541, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13353/13353), done.
+Writing objects: 100% (63541/63541), done.
+Total 63541 (delta 42841), reused 63541 (delta 42841)
+HEAD is now at 5e0b03a Fixed bug when restricting the end of the cigar_line.
+
+
+Diffed some tags and/or branches.
+  Found 315 with no diff.
+  Found 0 with differences between CVS and Git,
+    see /run/shm/cvs2git-ensembl-compara.FZpD3G/checkrevs/
+
+
+
+Leaving you to clean up: C2G_TMP=/run/shm/cvs2git-ensembl-compara.FZpD3G
+  rm -rf /run/shm/cvs2git-ensembl-compara.FZpD3G
+matttop:~/src/cvs2git-wrap (compara $>) $ KNOWN_GOOD_CILIST=/home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt TMPDIR=/run/shm CVS2GIT_SQUIRREL_DIR=/home/matthieu/migration-squirrel CVS2SVN_INST=/usr/bin/ IEC_FILE=/home/matthieu/src/cvs2git-wrap/ensembl-compara.iec  ./ensembl-cvs2git ensembl-compara
+mode of ‘/run/shm/cvs2git-ensembl-compara.nuOaBE’ changed from 0700 (rwx------) to 0755 (rwxr-xr-x)
+Running for PROJ=ensembl-compara in C2G_TMP=/run/shm/cvs2git-ensembl-compara.nuOaBE
+Unpacking /home/matthieu/migration-squirrel/ensembl-compara.repo.tgz - here is one I made earlier
+/home/matthieu/src/cvs2git-wrap/ensembl-compara-hackery.sh absent, no worries
+You could set FETCHREPO_INTERACT to break into a shell here
+‘/run/shm/tmp.IvVTVzCgs6’ -> ‘/run/shm/cvs2git-ensembl-compara.nuOaBE/repo’
+All ,v files are under ensembl-compara/ - promote them
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/Attic’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/Attic’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/docs’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/docs’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/LICENSE,v’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/LICENSE,v’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/modules’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/modules’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/scripts’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/scripts’
+‘/tmp/ENSCOPY-ENSEMBL-COMPARA/ensembl-compara/sql’ -> ‘/tmp/ENSCOPY-ENSEMBL-COMPARA/sql’
+Unpacking /home/matthieu/migration-squirrel/ensembl-compara.git.tgz - here is one I made earlier
+Will compare CVS vs. Git contents for
+
+  HEAD vs. master
+
+  tags:
+    baseline-branchpoint
+    blastz-pipeline_1beta
+    bp-branch-new-seqstore
+    branch-1000genomes-13-69
+    branch-ensemblgenomes-17-70-branchpoint
+    branchpoint-vega-37-1
+    branchpoint-vega-37-2
+    branchpoint-vega-38-dev
+    branchpoint-vega-39-dev
+    compara-hive-dev
+    eg-56-branchpoint
+    ensembl-10-branchpoint
+    ensembl-11-branchpoint
+    ensembl-12-branchpoint
+    ensembl-13-branchpoint
+    ensembl-14-branchpoint
+    ensembl-15-branchpoint
+    ensembl-16-branchpoint
+    ensembl-17-branchpoint
+    ensembl-18-branchpoint
+    ensembl-19-branchpoint
+    ensembl-20-branchpoint
+    ensembl-21-branchpoint
+    ensembl-22-branchpoint
+    ensembl-23-branchpoint
+    ensembl-24-branchpoint
+    ensembl-25-branchpoint
+    ensembl-26-branchpoint
+    ensembl-27-branchpoint
+    ensembl-28-branchpoint
+    ensembl-29-branchpoint
+    ensembl-30-branchpoint
+    ensembl-31-branchpoint
+    ensembl-32-branchpoint
+    ensembl-33-branchpoint
+    ensembl-34-branchpoint
+    ensembl-35-branchpoint
+    ensembl-36-branchpoint
+    ensembl-37-branchpoint
+    ensembl-39-branchpoint
+    ensembl-4-1-branchpoint
+    ensembl-4-2-branchpoint
+    ensembl-4-branchpoint
+    ensembl-40-branchpoint
+    ensembl-41-branchpoint
+    ensembl-42-branchpoint
+    ensembl-43-branchpoint
+    ensembl-44-branchpoint
+    ensembl-45-branchpoint
+    ensembl-46-branchpoint
+    ensembl-47-branchpoint
+    ensembl-47-mergepoint-1
+    ensembl-47-mp-1
+    ensembl-48-branchpoint
+    ensembl-49-branchpoint
+    ensembl-5-branchpoint
+    ensembl-50-branchpoint
+    ensembl-51-branchpoint
+    ensembl-52-branchpoint
+    ensembl-53-branchpoint
+    ensembl-54-branchpoint
+    ensembl-55-branchpoint
+    ensembl-56-branchpoint
+    ensembl-57-2-branchpoint
+    ensembl-57-branchpoint
+    ensembl-58-branchpoint
+    ensembl-59-branchpoint
+    ensembl-6-branchpoint
+    ensembl-60-branchpoint
+    ensembl-61-branchpoint
+    ensembl-62-branchpoint
+    ensembl-63-branchpoint
+    ensembl-64-branchpoint
+    ensembl-65-branchpoint
+    ensembl-66-branchpoint
+    ensembl-67-branchpoint
+    ensembl-68-branchpoint
+    ensembl-69-branchpoint
+    ensembl-7-branchpoint
+    ensembl-70-branchpoint
+    ensembl-71-branchpoint
+    ensembl-72-branchpoint
+    ensembl-73-branchpoint
+    ensembl-74-branchpoint
+    ensembl-8-branchpoint
+    ensembl-9-branchpoint
+    ensembl-branchpoint-38
+    ensembl-magic-branchpoint
+    ensemblgenomes-10-63-branchpoint
+    ensemblgenomes-11-64-branchpoint
+    ensemblgenomes-12-65-branchpoint
+    ensemblgenomes-4-56-branchpoint
+    ensemblgenomes-5-58-branchpoint
+    ensemblgenomes-56-branchpoint
+    ensemblgenomes-6-59-branchpoint
+    ensemblgenomes-7-60-branchpoint
+    ensemblgenomes-8-61-branchpoint
+    ensemblgenomes-9-62-branchpoint
+    mergepoint-branch-ensembl-dec09-head
+    mergepoint-vega-38-dev-1
+    mergepoint-vega-38-dev-head-1
+    mergepoint-vega-44-dev-head-1
+    mergepoint-vega-46-dev-e48
+    mergepoint-vega-46-dev-head-1
+    mergepoint-vega-48dev_HEAD
+    mergepoint-vega-49-dev-head
+    start
+    tag-ensemblgenomes-16-69
+    tag-ensemblgenomes-18-71
+    tag-ensemblgenomes-19-72
+    tag-ensemblgenomes-20-73
+    vega-19-branchpoint
+    vega-2-branchpoint
+    vega-23-1-branchpoint
+    vega-23-2-branchpoint
+    vega-23-3-branchpoint
+    vega-23-4-branchpoint
+    vega-23-5-branchpoint
+    vega-26-1-branchpoint
+    vega-26-2-branchpoint
+    vega-26-dev-branchpoint
+    vega-28-1-branchpoint
+    vega-30-1-branchpoint
+    vega-30-3-branchpoint
+    vega-31-1-branchpoint
+    vega-31-branchpoint
+    vega-31-dev-branchpoint
+    vega-35-1-branchpoint
+    vega-35-dev-branchpoint
+    vega-37-dev-branchpoint
+    vega-38-1-branchpoint
+    vega-39-branchpoint
+    vega-40-1-branchpoint
+    vega-40-dev-branchpoint
+    vega-41-1-branchpoint
+    vega-41-branchpoint
+    vega-41-dev-branchpoint
+    vega-43-branchpoint
+    vega-43-dev-branchpoint
+    vega-44-2-branchpoint
+    vega-44-3-branchpoint
+    vega-44-branchpoint
+    vega-44-dev-branchpoint
+    vega-46-1-branchpoint
+    vega-46-3-branchpoint
+    vega-46-4-branchpoint
+    vega-46-dev-branchpoint
+    vega-48-dev-branchpoint
+    vega-49-1-branchpoint
+    vega-49-2-branchpoint
+    vega-49-3-branchpoint
+    vega-49-5-branchpoint
+    vega-49-dev-branchpoint
+    vega-55-1-branchpoint
+    vega-59-1-branchpoint
+    vega-61-1-branchpoint
+
+  branches:
+    branch-baseline
+    branch-compara-pipeline-dev-20a
+    branch-compara-tree-dev-27a
+    branch-eg-56
+    branch-ensembl-10
+    branch-ensembl-11
+    branch-ensembl-12
+    branch-ensembl-13
+    branch-ensembl-14
+    branch-ensembl-15
+    branch-ensembl-16
+    branch-ensembl-17
+    branch-ensembl-18
+    branch-ensembl-19
+    branch-ensembl-20
+    branch-ensembl-21
+    branch-ensembl-22
+    branch-ensembl-23
+    branch-ensembl-24
+    branch-ensembl-25
+    branch-ensembl-26
+    branch-ensembl-27
+    branch-ensembl-28
+    branch-ensembl-29
+    branch-ensembl-30
+    branch-ensembl-31
+    branch-ensembl-32
+    branch-ensembl-33
+    branch-ensembl-34
+    branch-ensembl-35
+    branch-ensembl-36
+    branch-ensembl-37
+    branch-ensembl-38
+    branch-ensembl-39
+    branch-ensembl-4
+    branch-ensembl-4-2
+    branch-ensembl-40
+    branch-ensembl-41
+    branch-ensembl-42
+    branch-ensembl-43
+    branch-ensembl-44
+    branch-ensembl-45
+    branch-ensembl-46
+    branch-ensembl-47
+    branch-ensembl-48
+    branch-ensembl-49
+    branch-ensembl-5
+    branch-ensembl-50
+    branch-ensembl-50-dev
+    branch-ensembl-51
+    branch-ensembl-52
+    branch-ensembl-53
+    branch-ensembl-54
+    branch-ensembl-55
+    branch-ensembl-56
+    branch-ensembl-57
+    branch-ensembl-58
+    branch-ensembl-59
+    branch-ensembl-6
+    branch-ensembl-60
+    branch-ensembl-61
+    branch-ensembl-62
+    branch-ensembl-63
+    branch-ensembl-64
+    branch-ensembl-65
+    branch-ensembl-66
+    branch-ensembl-67
+    branch-ensembl-68
+    branch-ensembl-69
+    branch-ensembl-7
+    branch-ensembl-70
+    branch-ensembl-71
+    branch-ensembl-72
+    branch-ensembl-73
+    branch-ensembl-74
+    branch-ensembl-8
+    branch-ensembl-9
+    branch-ensembl-dec09
+    branch-ensembl-magic
+    branch-ensemblgenomes-10-63
+    branch-ensemblgenomes-11-64
+    branch-ensemblgenomes-12-65
+    branch-ensemblgenomes-13-66
+    branch-ensemblgenomes-14-67
+    branch-ensemblgenomes-15-68
+    branch-ensemblgenomes-16-69
+    branch-ensemblgenomes-17-70
+    branch-ensemblgenomes-18-71
+    branch-ensemblgenomes-19-72
+    branch-ensemblgenomes-20-73
+    branch-ensemblgenomes-4-56
+    branch-ensemblgenomes-5-58
+    branch-ensemblgenomes-56
+    branch-ensemblgenomes-6-59
+    branch-ensemblgenomes-7-60
+    branch-ensemblgenomes-8-61
+    branch-ensemblgenomes-9-62
+    branch-gen_malign
+    branch-new-seqstore
+    branch-registry
+    branch-vega-10
+    branch-vega-19
+    branch-vega-23-1
+    branch-vega-23-2
+    branch-vega-23-3
+    branch-vega-23-4
+    branch-vega-23-5
+    branch-vega-23-dev
+    branch-vega-26-1
+    branch-vega-26-2
+    branch-vega-26-dev
+    branch-vega-28-1
+    branch-vega-28-dev
+    branch-vega-30-1
+    branch-vega-30-2
+    branch-vega-30-3
+    branch-vega-30-dev
+    branch-vega-31
+    branch-vega-31-1
+    branch-vega-31-dev
+    branch-vega-35-1
+    branch-vega-35-dev
+    branch-vega-37-1
+    branch-vega-37-2
+    branch-vega-37-dev
+    branch-vega-38-1
+    branch-vega-38-dev
+    branch-vega-39
+    branch-vega-39-dev
+    branch-vega-40-1
+    branch-vega-40-dev
+    branch-vega-41
+    branch-vega-41-1
+    branch-vega-41-dev
+    branch-vega-43
+    branch-vega-43-dev
+    branch-vega-44
+    branch-vega-44-2
+    branch-vega-44-3
+    branch-vega-44-dev
+    branch-vega-46-1
+    branch-vega-46-3
+    branch-vega-46-4
+    branch-vega-46-dev
+    branch-vega-48-dev
+    branch-vega-49-1
+    branch-vega-49-2
+    branch-vega-49-3
+    branch-vega-49-5
+    branch-vega-49-dev
+    branch-vega-55-1
+    branch-vega-59-1
+    branch-vega-61-1
+    compara-family-merge
+    compara-hive-dev2
+    genebuild_projection
+    projection_genebuild_2010_05
+    projection_genebuild_2011_07
+
+
+HEAD is now at 5e0b03a Fixed bug when restricting the end of the cigar_line.
+HEAD is now at 1b1149d removed deleteObj call
+  checktag baseline-branchpoint vs baseline-branchpoint: 1b1149d002724a12f68ce4bfc03b2b13ea428592 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 29565b2 can't use instance variable to control global_clean method (global scope so no $self)
+HEAD is now at 7a846bd Adding/merging family/domain/homology scripts from branch compara-family-merge to main trunk
+  checktag bp-branch-new-seqstore vs bp-branch-new-seqstore: 7a846bd5ffd8801bbfecd19dc3fe5c5bfaa56414 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 11e6381 use 2 to define dbname etc in one place
+HEAD is now at 344425d vega 51
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 18a71dd missing ,
+  checktag compara-hive-dev vs compara-hive-dev: 18a71dd62509e6abe2b7c78f5403b34b5d89d129 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 7b81619 Reverting changes of code back to their original branched version (this was the first edit for all files). Changes will have to go at a later date but it will be used "offline"
+HEAD is now at 4089a6f fixed adaptor attaching in fetch_all
+  checktag ensembl-10-branchpoint vs ensembl-10-branchpoint: 4089a6f09c91aa92bd1ed691442530df086e0216 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at e399986 fixed same-species synteny Fex
+  checktag ensembl-11-branchpoint vs ensembl-11-branchpoint: e3999861e04383dd5f0a39e7660ac35872aa30e4 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 0a042f6 case-insensitive caching
+  checktag ensembl-12-branchpoint vs ensembl-12-branchpoint: 0a042f69f18bc22af2669ec9cd03d9c75cc6dd8e is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 039dfd2 Fixed hopefully last bug after code cleaning
+  checktag ensembl-13-branchpoint vs ensembl-13-branchpoint: 039dfd263ff6223d331b21f1cd804f9f367d7799 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+  checktag ensembl-14-branchpoint vs ensembl-14-branchpoint: 5ca27dda281e583152887d4a06876e7b4be822dc is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+  checktag ensembl-15-branchpoint vs ensembl-15-branchpoint: 5ca27dda281e583152887d4a06876e7b4be822dc is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 7a55a2c Small fixes to synteny code and some changes to allow it to work for
+  checktag ensembl-16-branchpoint vs ensembl-16-branchpoint: 7a55a2cb73dfa62adfd5ee53152fe5b4d2776dbb is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 2ce7348 update
+  checktag ensembl-17-branchpoint vs ensembl-17-branchpoint: 2ce73485b95b74644dcc531a363e2f42b5b1a882 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at a92896f  comment warn
+  checktag ensembl-18-branchpoint vs ensembl-18-branchpoint: a92896f938e27e3155c33e4b106edd388a152319 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 544b540 Modified dn,ds and dnds_ratio methods to filter systematically on the ds value given a hard-coded threshold. I'll make sure that for the next release, i.e. feb 2004, either we decide not to store the not-trustable data or store the ds threshold in compara. Added also get_4D_SimpleAlign method just to obtain alignment on the 3rd base of 4-fold codons
+  checktag ensembl-19-branchpoint vs ensembl-19-branchpoint: 544b54012431bbfb4b71731210b91ec932437849 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 2856d92 removed really annoying warn
+  checktag ensembl-20-branchpoint vs ensembl-20-branchpoint: 2856d9229e3f139dacf66c00a3050bfd906c8fee is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 5d236a6 merging compara_hive_dev2 into the head.
+  checktag ensembl-21-branchpoint vs ensembl-21-branchpoint: 5d236a6f148dc6c62e154b248b8a2267d56f402d is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 2ae72d6 fixed
+  checktag ensembl-22-branchpoint vs ensembl-22-branchpoint: 2ae72d6148475ec0610dd3d02708802b45d5dca3 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 43c2e0e added DnaFragChuckAdaptor
+HEAD is now at 1f84adf made Bio::EnsEMBL::Root objects so error throws do not die
+HEAD is now at a88192c added direct 'insert ignore into method_link ...' of BLASTZ_RAW so that the
+HEAD is now at 297897f set default hive_capacity for blastz template to 800
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at df169be Added: -top_level flag to dump only the seq_regions of a given coordinate system which are top_level.
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at de00553 added STDOUT print of root_id of the set of all the clusters generated by
+HEAD is now at 6b379fb Fix POD
+HEAD is now at 8999d20 - clump genomic regions in order to speed up the comparisons.
+HEAD is now at e2fafa9 Added: status and biotype attributes to the aligned Bio::EnsEMBL::Gene objects.
+HEAD is now at 830524f added UNIQUE tag_node_id (node_id, tag_id); to protein_tree_tags table
+HEAD is now at cc4ef15 Disable the setting of the dbID when storing a new GenomicAlign (i.e. a GenomicAlign with no dbID) between method_link_species_set*10^10 and (method_link_species_set+1)*10^10 by default. Default behaviour relies on the AUTO_INCREMENT feature again.
+HEAD is now at 43b195c Documentation update
+HEAD is now at ebe2956 Updated the pod documentation
+HEAD is now at c0945a7 Trying to clarify code. Adding variables setting via options in command lines.
+  checktag ensembl-4-1-branchpoint vs ensembl-4-1-branchpoint: c0945a7f6b75cb7e63544529995efdb4fec101a8 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at f1352e3 Added method fetch_align_name_by_align_id. Modify get_AlignBlockSet to retrieve cigar_line
+  checktag ensembl-4-2-branchpoint vs ensembl-4-2-branchpoint: f1352e38f7f751912e14109b418cc4080084963b is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at bdb78d9 This commit was manufactured by cvs2svn to create tag
+  checktag ensembl-4-branchpoint vs ensembl-4-branchpoint: bdb78d9fd88a7f33a0340de1114a9f7d8a970d72 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at f294e8f added a function to get a max distance from a node to a leaf
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 7cb4a06 Notes on debugging strategies
+HEAD is now at e87e383 yet another extra formats for printing newick files -- njtree and ncbi-related
+HEAD is now at 9b79b95 Fix bug in get_SimpleAlign method when there is no reference GenomicAlign.
+HEAD is now at 46c3579 Update for release 45
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 9f8d27a updated for v48
+HEAD is now at 7312914 two anchor tables for the EPO pipeline added
+HEAD is now at 5b0b051 added Ewan's tables to the branch. Only :-) 18 tables here
+  checktag ensembl-5-branchpoint vs ensembl-5-branchpoint: 5b0b051ce3bf495cc678fe5407d0102aac8ba787 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 66ed129 Keep the tree when getting underlying slices (for ancestral sequences only)
+HEAD is now at 71a7c4e Undo previous changes
+HEAD is now at 26372b3 v52
+HEAD is now at f711e00 Changed regexp for method_link_class to be GenomicAlignTree instead of tree_alignment
+HEAD is now at c4b320b *** empty log message ***
+HEAD is now at 09f09bf Added temporary fix to problem in core when masking haplotypes because the assembly mapper is cached
+HEAD is now at a1efea7 reinclude cigar_line calculation when no_between option is defined
+HEAD is now at b51c1c7 loads RFAM models from ftp site into nctree pipeline db -- nctree pipeline -- Albert Vilella
+HEAD is now at e41cfcf update
+HEAD is now at ea86983 moved to PipeConfig and changed accordingly
+HEAD is now at 3799667 skips alignment seqs consisting of just "-" and/or "."
+HEAD is now at a55b09a Switched order of statements in DESTROY so that the db is disconnected
+  checktag ensembl-6-branchpoint vs ensembl-6-branchpoint: a55b09a6b030fcf01c0ca021fb2fa8700d087ce8 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at 435a841 Small bug fixes and changes
+HEAD is now at 09daec9 Renamed analysis create_species_tree to make_species_tree and changed it to use the new MakeSpeciesTree Runnable
+HEAD is now at 4ae8835 removed some unused and deprecated functions
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at ab33a9b This commit was manufactured by cvs2svn to create tag
+HEAD is now at 9597a22 inherit attach() from the BaseAdaptor
+HEAD is now at 01e0063 Added an option to read branch lengths from the gene trees
+HEAD is now at d356032 Added death date for deprecated methods
+HEAD is now at 1b1149d removed deleteObj call
+  checktag ensembl-7-branchpoint vs ensembl-7-branchpoint: 1b1149d002724a12f68ce4bfc03b2b13ea428592 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 438ec79 typo
+HEAD is now at 1f5c3aa Added missing semi-colons
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 7fd1bdb pairwise alignment diagram was missing
+HEAD is now at a504ee0 Added the Apache 2.0 license header
+HEAD is now at e8c630f Added in docs and code for dumping and creating synteny blocks.
+HEAD is now at 838468c fillcompgap.pl use ComparaConf.pl. Update ComparaConf.pl.example
+  checktag ensembl-9-branchpoint vs ensembl-9-branchpoint: 838468c5882c1e794ef97b9239cbbfc86af2b82d is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 09daec9 Renamed analysis create_species_tree to make_species_tree and changed it to use the new MakeSpeciesTree Runnable
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at ea86983 moved to PipeConfig and changed accordingly
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at a273886 Poor documentation improved
+HEAD is now at 9b742f1 call corrected fetch_by_Member_id_Member_id
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at ec7fc3f Added error check for valid genome_db_id
+HEAD is now at 5b12bc2 Allow to dump GenomicAlignTrees
+HEAD is now at 5b12bc2 Allow to dump GenomicAlignTrees
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at 98dbd69 This commit was manufactured by cvs2svn to create tag 'mergepoint-vega-49
+HEAD is now at f64ecb0 new comparative db - basically moved genomic align stuff from ensemlb here. Will improve
+  checktag start vs start: f64ecb0d3718d51001e56c9f5aeaf798f07c86cb is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at c961454 Added "need_cds_seq" parameter
+HEAD is now at a082d55 Fix Licence header
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 0938646 BioPerl can natively write alignments in stockholm format. No need to use "sreformat"
+HEAD is now at b5bddde included database port number on command line and compara DBAdaptor call. Also added alignment type option
+  checktag vega-19-branchpoint vs vega-19-branchpoint: b5bdddec9977554896d350734928100dfed54b8a is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at e399986 fixed same-species synteny Fex
+  checktag vega-2-branchpoint vs vega-2-branchpoint: e3999861e04383dd5f0a39e7660ac35872aa30e4 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at c3f26d3 Changed the way PAFs are ranked and BRHs pulled to deal with the fact that
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at f482bc7 takes a chr argument to interpolate_best_location
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at 768ac28 phyml can't build trees unless there are >2 sequences as input.  added code
+HEAD is now at b7ff380 added method: parent_link
+HEAD is now at b7ff380 added method: parent_link
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 9c1900e merge of Javier code from the HEAD
+HEAD is now at 848aaea changed print STDERR to warn
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at fedba96 remove warn (on vega branch)
+HEAD is now at 01e5561 Fix bug: previous fix broke the compara tracks on contig view. Now uses reference_slice when available (contig view) and consensus coordinates otherwise (alignview)
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 9b79b95 Fix bug in get_SimpleAlign method when there is no reference GenomicAlign.
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at d26a277 merge from vega-46-4
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at f700a55 very bad hack for vega only
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at 55ab9d9 adding stable_id method in v55 branch
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at e8c630f Added in docs and code for dumping and creating synteny blocks.
+HEAD is now at 84dfb84 changed definitions in config file
+  checktag branch-compara-pipeline-dev-20a vs branch-compara-pipeline-dev-20a: 84dfb845c29a12efa16ca23e37c4635e2cc303dc is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 2e83883 simple script to test the tree system by creating a taxon tree.  stores and
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at 95473a8 add score to the output
+  checktag branch-ensembl-10 vs branch-ensembl-10: 95473a89eb4263930331658b5e8c86dc4d72c63b is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at a602eca Delete a warn message from HomologyAdaptor
+  checktag branch-ensembl-11 vs branch-ensembl-11: a602ecacd8cc506fdc338bb136cde9d72406ffe6 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 417d2ce corrected a few typos
+  checktag branch-ensembl-12 vs branch-ensembl-12: 417d2ce63b22e474c6859079b75a4bdbc808a5b9 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 039dfd2 Fixed hopefully last bug after code cleaning
+  checktag branch-ensembl-13 vs branch-ensembl-13: 039dfd263ff6223d331b21f1cd804f9f367d7799 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+  checktag branch-ensembl-14 vs branch-ensembl-14: 5ca27dda281e583152887d4a06876e7b4be822dc is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 5ca27dd Updated to make it work on the new schema
+  checktag branch-ensembl-15 vs branch-ensembl-15: 5ca27dda281e583152887d4a06876e7b4be822dc is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 7a55a2c Small fixes to synteny code and some changes to allow it to work for
+  checktag branch-ensembl-16 vs branch-ensembl-16: 7a55a2cb73dfa62adfd5ee53152fe5b4d2776dbb is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 2ce7348 update
+  checktag branch-ensembl-17 vs branch-ensembl-17: 2ce73485b95b74644dcc531a363e2f42b5b1a882 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 64ee988 fix from Steven Roels: coordinates were incorrect for negative strand slices in fetch_all_by_Slice
+  checktag branch-ensembl-18 vs branch-ensembl-18: 64ee9889659b8a8abffa091d071d82cbd81085d6 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at b5bddde included database port number on command line and compara DBAdaptor call. Also added alignment type option
+  checktag branch-ensembl-19 vs branch-ensembl-19: b5bdddec9977554896d350734928100dfed54b8a is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 68d6968 removed shout
+  checktag branch-ensembl-20 vs branch-ensembl-20: 68d6968e9c9ee0b3088e53913329534118103edf is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 7559570 removed table extensions planned for release 22 that accidentally were
+  checktag branch-ensembl-21 vs branch-ensembl-21: 75595704dfccd61a23270b4bbdd6800793bddeda is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at d43ee8a Added a constraint in fetch_by_Member_paired_species
+  checktag branch-ensembl-22 vs branch-ensembl-22: d43ee8a9fafa58926ca75784e6c63a50b881672f is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 2c14e36 removed print
+HEAD is now at f612f85 Made it a bit more generic
+HEAD is now at 62f0c7a Updated for schema 25.1
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at b39ce2c patch for MLSS table in compara release 27
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at 221f4ba Fix BUG: in fetch_all_by_MethodLinkSpeciesSet_Slice() when top_level seq_region is not in compara
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at c737cb7 changed use Data::UUID to
+HEAD is now at ab71645 Reorder methods
+HEAD is now at 8999d20 - clump genomic regions in order to speed up the comparisons.
+HEAD is now at 76916f6 updated for ciona pre
+HEAD is now at 830524f added UNIQUE tag_node_id (node_id, tag_id); to protein_tree_tags table
+HEAD is now at b2ab369 fix the schema_version in the meta table
+HEAD is now at 2fbccb4 fixing some perldoc lines that must have been left from a copy paste
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 5b0b051 added Ewan's tables to the branch. Only :-) 18 tables here
+  checktag branch-ensembl-4 vs branch-ensembl-4: 5b0b051ce3bf495cc678fe5407d0102aac8ba787 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at b70160c Fixed bug. Now code consider compara dna/dna data as symetric ie you can query from human->mouse or from mouse->human
+  checktag branch-ensembl-4-2 vs branch-ensembl-4-2: b70160c23c862f66526ecd48c92f95ee2d992dda is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 848aaea changed print STDERR to warn
+HEAD is now at 86fa5fe Corrected some method call that are only in the head code and due to be released in branch-ensembl-42
+HEAD is now at c4f100a Fix nasty warning message when score is NULL for this block
+HEAD is now at 01e5561 Fix bug: previous fix broke the compara tracks on contig view. Now uses reference_slice when available (contig view) and consensus coordinates otherwise (alignview)
+HEAD is now at 9b79b95 Fix bug in get_SimpleAlign method when there is no reference GenomicAlign.
+HEAD is now at f8a154c Fix bug: ignoring overlapping alignments was not working properly if more than 2 overlapping alignments were found
+HEAD is now at c7c0fa5 ignore short (<10aa) translations
+HEAD is now at 5720f05 add method get_all_Members
+HEAD is now at d26a277 merge from vega-46-4
+HEAD is now at f033dcd Fix end loop condition
+HEAD is now at 44a12ff Added fetch_homologues_by_chr_start_in_species - retrieves N genes in order from the given start position, along with the corresponding homologues.  Probably never going to use this now...
+  checktag branch-ensembl-5 vs branch-ensembl-5: 44a12fffdba2c5cbcf36841f3335a8a952473fbd is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at b54f3a2 Undo previous changes. Merge from HEAD
+HEAD is now at 60a3516 allow for stop codon
+HEAD is now at 4fc8398 
+HEAD is now at eea57c8 changes undone
+HEAD is now at 530c90d Added AnchorSeqAdaptor and AnchorAlignAdaptor.
+HEAD is now at d68ba28 adding sequence_exon_bounded to branch-54
+HEAD is now at 3896ec70 Improved logic for searching by Member_root_id allowing the user to set the clusterset_id usage off if required
+HEAD is now at 10f9020 fix the check for genome names with / wo underscores
+HEAD is now at 8a4dd29 fetch_by_Member_root_id expects a peptide_member, so it should call gene_member_id in gene_member_id_is_in_tree method
+HEAD is now at 7e15133 Added new fetch_all_by_Slice method.
+HEAD is now at 91a9ee8 added argument to restrict the optimal cut point this distance from either end of the sequence
+HEAD is now at 1b1149d removed deleteObj call
+  checktag branch-ensembl-6 vs branch-ensembl-6: 1b1149d002724a12f68ce4bfc03b2b13ea428592 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at 96d3b64 Poor documentation improved
+HEAD is now at 0d4a1b3 Backported change to allow usage of standaloneJob.pl
+HEAD is now at efaf31b slice_mapper_pairs is now initialised to an empty array and therefore need to check for empty array instead of undef.
+HEAD is now at 7ec4420 Now able to print the current species tree
+HEAD is now at 168e8aa commented out warning as $this_genomic_align_block->node_id method no longer exists
+HEAD is now at 990ebc3 updated method calls from
+HEAD is now at f98b11e a method call to alignment_segments now works for ce objects generated from
+HEAD is now at 3b77f62 Creates additional clustersets in HMMClusterize
+HEAD is now at 1b1149d removed deleteObj call
+  checktag branch-ensembl-7 vs branch-ensembl-7: 1b1149d002724a12f68ce4bfc03b2b13ea428592 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 77cd6f6 Rename DnaFragAdaptor->fetch_by_synteny_region_id() to DnaFragAdaptor->fetch_all_by_synteny_region_id()
+HEAD is now at 1d731a9 Updated workshop material after the last workshop (e71)
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 2cbc3b4 updates for Vega 54 run on farm3
+HEAD is now at dd7cde8 Not all the homologies have a species_tree_node_id
+HEAD is now at e8c630f Added in docs and code for dumping and creating synteny blocks.
+HEAD is now at da6615b fixed 1; porblems
+  checktag branch-ensembl-9 vs branch-ensembl-9: da6615b59cf1972a13d9e1023f5fafbc170364a6 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at e41cfcf update
+HEAD is now at 5980ff8 Added start of the POD
+HEAD is now at 09daec9 Renamed analysis create_species_tree to make_species_tree and changed it to use the new MakeSpeciesTree Runnable
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 74ff1d1 Fixed possible_orthologs bug
+HEAD is now at 7209c8b Bug caused by a typo
+HEAD is now at b1324c4 ProjectOntologyXref.pm
+HEAD is now at 8caa268 Updated the Compara species tree and the related documentation
+HEAD is now at c961454 Added "need_cds_seq" parameter
+HEAD is now at 344425d vega 51
+HEAD is now at a082d55 Fix Licence header
+HEAD is now at 16b5d6e Updated tutorials for the Gene/SeqMember API
+HEAD is now at 0938646 BioPerl can natively write alignments in stockholm format. No need to use "sreformat"
+HEAD is now at 7a2033a Adding engine support
+HEAD is now at ea86983 moved to PipeConfig and changed accordingly
+HEAD is now at 060d370 The method which works to get exact name  subsets of data was not behaving; probably the reason why this was not working before
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at ba1d58b more simplifying changes
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at a273886 Poor documentation improved
+HEAD is now at 1ee64f6 Merge branch-gen_malign into main trunk.
+HEAD is now at 7a846bd Adding/merging family/domain/homology scripts from branch compara-family-merge to main trunk
+  checktag branch-new-seqstore vs branch-new-seqstore: 7a846bd5ffd8801bbfecd19dc3fe5c5bfaa56414 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at 0e18ab3 DBAdaptor not DBConnection should now be used in the sanity test
+  checktag branch-registry vs branch-registry: 0e18ab3619ed4f1715f641568fedda24bae10134 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at e399986 fixed same-species synteny Fex
+  checktag branch-vega-10 vs branch-vega-10: e3999861e04383dd5f0a39e7660ac35872aa30e4 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at b5bddde included database port number on command line and compara DBAdaptor call. Also added alignment type option
+  checktag branch-vega-19 vs branch-vega-19: b5bdddec9977554896d350734928100dfed54b8a is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at c3f26d3 Changed the way PAFs are ranked and BRHs pulled to deal with the fact that
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1f365c5 now grab all methods in the use Bio::EnsEMBL::Utils::Exception statement
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 1b691c7 Fix bug: original_sequence returned in the right strand instead of always on the forward strand
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at 0893b20 new designed conf file example for redesigned genomic align system
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at dead065 modified left join syntax  and searching for members in trees to run faster
+HEAD is now at 987ee9b switched off Data::UUID
+HEAD is now at f482bc7 takes a chr argument to interpolate_best_location
+HEAD is now at b7ff380 added method: parent_link
+HEAD is now at 41cf2b5 copes with (Vega) translations where CDS start > CDs end
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 33d5c8d Now the fetch_masked_sequence subroutine can masked the PAR regions if requested in the masking options
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 5f13338 fixing typo
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 3edb0d7 Added ENSEMBL_HOMOLOGUES and PROTEIN_TREES
+HEAD is now at 9c1900e merge of Javier code from the HEAD
+HEAD is now at 9c1900e merge of Javier code from the HEAD
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at 9868bc9 updating species_tree and some other bits and pieces
+HEAD is now at fedba96 remove warn (on vega branch)
+HEAD is now at fedba96 remove warn (on vega branch)
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 969baef previous patches copied to this specific vega branch
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at 9b66908 Update the schema version
+HEAD is now at f2b2b72 ignore short (<10aa) translations
+HEAD is now at d26a277 merge from vega-46-4
+HEAD is now at b60fd97 Use restrict method in Bio::EnsEMBL::Compara::GenomicAlign module. This should also fix a bug when restricting reverse-complemented GenomicAlignBlocks
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at b525ccb fix foreign key dependency
+HEAD is now at f700a55 very bad hack for vega only
+HEAD is now at f700a55 very bad hack for vega only
+HEAD is now at 55ab9d9 adding stable_id method in v55 branch
+HEAD is now at 0b70cdb Fetch canonical transcript for non-coding gene members using the member table as these are not in the new subset table
+HEAD is now at e439a4f make these two modules more compatible with the new config
+HEAD is now at f7c0f26 Import gene_relationship data from old schema 16,17 to new homology-related tables
+  checktag compara-family-merge vs compara-family-merge: f7c0f26d42bcd37cf1ffca1ccd7817bfd08525e8 is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at ac8dcfc consolidated hive tables into hive-tables.sql
+  checktag compara-hive-dev2 vs compara-hive-dev2: ac8dcfc7ad181f910814f333112ab1613fb803fc is in /home/matthieu/src/cvs2git-wrap/ensembl-compara.known-good.txt
+HEAD is now at f2bc446 WGA/Projection used for CHIMP2.1.4
+HEAD is now at 009ab7e print's removed
+HEAD is now at 19413ca previously missing from the branch
+Create tag cvs/baseline-branchpoint;    Deleted tag 'baseline-branchpoint' (was 1b1149d)
+Create tag cvs/blastz-pipeline_1beta;   Deleted tag 'blastz-pipeline_1beta' (was 29565b2)
+Create tag cvs/bp-branch-new-seqstore;  Deleted tag 'bp-branch-new-seqstore' (was 7a846bd)
+Create tag cvs/branch-1000genomes-13-69;        Deleted tag 'branch-1000genomes-13-69' (was 11e6381)
+Create tag cvs/branch-ensemblgenomes-17-70-branchpoint;         Deleted tag 'branch-ensemblgenomes-17-70-branchpoint' (was 344425d)
+Create tag cvs/branchpoint-vega-37-1;   Deleted tag 'branchpoint-vega-37-1' (was 33d5c8d)
+Create tag cvs/branchpoint-vega-37-2;   Deleted tag 'branchpoint-vega-37-2' (was 33d5c8d)
+Create tag cvs/branchpoint-vega-38-dev;         Deleted tag 'branchpoint-vega-38-dev' (was 5f13338)
+Create tag cvs/branchpoint-vega-39-dev;         Deleted tag 'branchpoint-vega-39-dev' (was 3edb0d7)
+Create tag cvs/compara-hive-dev;        Deleted tag 'compara-hive-dev' (was 18a71dd)
+Create tag cvs/eg-56-branchpoint;       Deleted tag 'eg-56-branchpoint' (was 7b81619)
+Create tag cvs/ensembl-10-branchpoint;  Deleted tag 'ensembl-10-branchpoint' (was 4089a6f)
+Create tag cvs/ensembl-11-branchpoint;  Deleted tag 'ensembl-11-branchpoint' (was e399986)
+Create tag cvs/ensembl-12-branchpoint;  Deleted tag 'ensembl-12-branchpoint' (was 0a042f6)
+Create tag cvs/ensembl-13-branchpoint;  Deleted tag 'ensembl-13-branchpoint' (was 039dfd2)
+Create tag cvs/ensembl-14-branchpoint;  Deleted tag 'ensembl-14-branchpoint' (was 5ca27dd)
+Create tag cvs/ensembl-15-branchpoint;  Deleted tag 'ensembl-15-branchpoint' (was 5ca27dd)
+Create tag cvs/ensembl-16-branchpoint;  Deleted tag 'ensembl-16-branchpoint' (was 7a55a2c)
+Create tag cvs/ensembl-17-branchpoint;  Deleted tag 'ensembl-17-branchpoint' (was 2ce7348)
+Create tag cvs/ensembl-18-branchpoint;  Deleted tag 'ensembl-18-branchpoint' (was a92896f)
+Create tag cvs/ensembl-19-branchpoint;  Deleted tag 'ensembl-19-branchpoint' (was 544b540)
+Create tag cvs/ensembl-20-branchpoint;  Deleted tag 'ensembl-20-branchpoint' (was 2856d92)
+Create tag cvs/ensembl-21-branchpoint;  Deleted tag 'ensembl-21-branchpoint' (was 5d236a6)
+Create tag cvs/ensembl-22-branchpoint;  Deleted tag 'ensembl-22-branchpoint' (was 2ae72d6)
+Create tag cvs/ensembl-23-branchpoint;  Deleted tag 'ensembl-23-branchpoint' (was 1f365c5)
+Create tag cvs/ensembl-24-branchpoint;  Deleted tag 'ensembl-24-branchpoint' (was 43c2e0e)
+Create tag cvs/ensembl-25-branchpoint;  Deleted tag 'ensembl-25-branchpoint' (was 1f84adf)
+Create tag cvs/ensembl-26-branchpoint;  Deleted tag 'ensembl-26-branchpoint' (was a88192c)
+Create tag cvs/ensembl-27-branchpoint;  Deleted tag 'ensembl-27-branchpoint' (was 297897f)
+Create tag cvs/ensembl-28-branchpoint;  Deleted tag 'ensembl-28-branchpoint' (was 0893b20)
+Create tag cvs/ensembl-29-branchpoint;  Deleted tag 'ensembl-29-branchpoint' (was df169be)
+Create tag cvs/ensembl-30-branchpoint;  Deleted tag 'ensembl-30-branchpoint' (was dead065)
+Create tag cvs/ensembl-31-branchpoint;  Deleted tag 'ensembl-31-branchpoint' (was de00553)
+Create tag cvs/ensembl-32-branchpoint;  Deleted tag 'ensembl-32-branchpoint' (was 6b379fb)
+Create tag cvs/ensembl-33-branchpoint;  Deleted tag 'ensembl-33-branchpoint' (was 8999d20)
+Create tag cvs/ensembl-34-branchpoint;  Deleted tag 'ensembl-34-branchpoint' (was e2fafa9)
+Create tag cvs/ensembl-35-branchpoint;  Deleted tag 'ensembl-35-branchpoint' (was 830524f)
+Create tag cvs/ensembl-36-branchpoint;  Deleted tag 'ensembl-36-branchpoint' (was cc4ef15)
+Create tag cvs/ensembl-37-branchpoint;  Deleted tag 'ensembl-37-branchpoint' (was 43b195c)
+Create tag cvs/ensembl-39-branchpoint;  Deleted tag 'ensembl-39-branchpoint' (was ebe2956)
+Create tag cvs/ensembl-4-1-branchpoint;         Deleted tag 'ensembl-4-1-branchpoint' (was c0945a7)
+Create tag cvs/ensembl-4-2-branchpoint;         Deleted tag 'ensembl-4-2-branchpoint' (was f1352e3)
+Create tag cvs/ensembl-4-branchpoint;   Deleted tag 'ensembl-4-branchpoint' (was bdb78d9)
+Create tag cvs/ensembl-40-branchpoint;  Deleted tag 'ensembl-40-branchpoint' (was f294e8f)
+Create tag cvs/ensembl-41-branchpoint;  Deleted tag 'ensembl-41-branchpoint' (was 9868bc9)
+Create tag cvs/ensembl-42-branchpoint;  Deleted tag 'ensembl-42-branchpoint' (was 7cb4a06)
+Create tag cvs/ensembl-43-branchpoint;  Deleted tag 'ensembl-43-branchpoint' (was e87e383)
+Create tag cvs/ensembl-44-branchpoint;  Deleted tag 'ensembl-44-branchpoint' (was 9b79b95)
+Create tag cvs/ensembl-45-branchpoint;  Deleted tag 'ensembl-45-branchpoint' (was 46c3579)
+Create tag cvs/ensembl-46-branchpoint;  Deleted tag 'ensembl-46-branchpoint' (was 9b66908)
+Create tag cvs/ensembl-47-branchpoint;  Deleted tag 'ensembl-47-branchpoint' (was 5980ff8)
+Create tag cvs/ensembl-47-mergepoint-1;         Deleted tag 'ensembl-47-mergepoint-1' (was 5980ff8)
+Create tag cvs/ensembl-47-mp-1;         Deleted tag 'ensembl-47-mp-1' (was 5980ff8)
+Create tag cvs/ensembl-48-branchpoint;  Deleted tag 'ensembl-48-branchpoint' (was 9f8d27a)
+Create tag cvs/ensembl-49-branchpoint;  Deleted tag 'ensembl-49-branchpoint' (was 7312914)
+Create tag cvs/ensembl-5-branchpoint;   Deleted tag 'ensembl-5-branchpoint' (was 5b0b051)
+Create tag cvs/ensembl-50-branchpoint;  Deleted tag 'ensembl-50-branchpoint' (was 66ed129)
+Create tag cvs/ensembl-51-branchpoint;  Deleted tag 'ensembl-51-branchpoint' (was 71a7c4e)
+Create tag cvs/ensembl-52-branchpoint;  Deleted tag 'ensembl-52-branchpoint' (was 26372b3)
+Create tag cvs/ensembl-53-branchpoint;  Deleted tag 'ensembl-53-branchpoint' (was f711e00)
+Create tag cvs/ensembl-54-branchpoint;  Deleted tag 'ensembl-54-branchpoint' (was c4b320b)
+Create tag cvs/ensembl-55-branchpoint;  Deleted tag 'ensembl-55-branchpoint' (was 09f09bf)
+Create tag cvs/ensembl-56-branchpoint;  Deleted tag 'ensembl-56-branchpoint' (was a1efea7)
+Create tag cvs/ensembl-57-2-branchpoint;        Deleted tag 'ensembl-57-2-branchpoint' (was b51c1c7)
+Create tag cvs/ensembl-57-branchpoint;  Deleted tag 'ensembl-57-branchpoint' (was e41cfcf)
+Create tag cvs/ensembl-58-branchpoint;  Deleted tag 'ensembl-58-branchpoint' (was ea86983)
+Create tag cvs/ensembl-59-branchpoint;  Deleted tag 'ensembl-59-branchpoint' (was 3799667)
+Create tag cvs/ensembl-6-branchpoint;   Deleted tag 'ensembl-6-branchpoint' (was a55b09a)
+Create tag cvs/ensembl-60-branchpoint;  Deleted tag 'ensembl-60-branchpoint' (was ba1d58b)
+Create tag cvs/ensembl-61-branchpoint;  Deleted tag 'ensembl-61-branchpoint' (was e439a4f)
+Create tag cvs/ensembl-62-branchpoint;  Deleted tag 'ensembl-62-branchpoint' (was 435a841)
+Create tag cvs/ensembl-63-branchpoint;  Deleted tag 'ensembl-63-branchpoint' (was 09daec9)
+Create tag cvs/ensembl-64-branchpoint;  Deleted tag 'ensembl-64-branchpoint' (was 4ae8835)
+Create tag cvs/ensembl-65-branchpoint;  Deleted tag 'ensembl-65-branchpoint' (was 74ff1d1)
+Create tag cvs/ensembl-66-branchpoint;  Deleted tag 'ensembl-66-branchpoint' (was ab33a9b)
+Create tag cvs/ensembl-67-branchpoint;  Deleted tag 'ensembl-67-branchpoint' (was 9597a22)
+Create tag cvs/ensembl-68-branchpoint;  Deleted tag 'ensembl-68-branchpoint' (was 01e0063)
+Create tag cvs/ensembl-69-branchpoint;  Deleted tag 'ensembl-69-branchpoint' (was d356032)
+Create tag cvs/ensembl-7-branchpoint;   Deleted tag 'ensembl-7-branchpoint' (was 1b1149d)
+Create tag cvs/ensembl-70-branchpoint;  Deleted tag 'ensembl-70-branchpoint' (was 438ec79)
+Create tag cvs/ensembl-71-branchpoint;  Deleted tag 'ensembl-71-branchpoint' (was 1f5c3aa)
+Create tag cvs/ensembl-72-branchpoint;  Deleted tag 'ensembl-72-branchpoint' (was 16b5d6e)
+Create tag cvs/ensembl-73-branchpoint;  Deleted tag 'ensembl-73-branchpoint' (was 7fd1bdb)
+Create tag cvs/ensembl-74-branchpoint;  Deleted tag 'ensembl-74-branchpoint' (was a504ee0)
+Create tag cvs/ensembl-8-branchpoint;   Deleted tag 'ensembl-8-branchpoint' (was e8c630f)
+Create tag cvs/ensembl-9-branchpoint;   Deleted tag 'ensembl-9-branchpoint' (was 838468c)
+Create tag cvs/ensembl-branchpoint-38;  Deleted tag 'ensembl-branchpoint-38' (was 5f13338)
+Create tag cvs/ensembl-magic-branchpoint;       Deleted tag 'ensembl-magic-branchpoint' (was 5980ff8)
+Create tag cvs/ensemblgenomes-10-63-branchpoint;        Deleted tag 'ensemblgenomes-10-63-branchpoint' (was 09daec9)
+Create tag cvs/ensemblgenomes-11-64-branchpoint;        Deleted tag 'ensemblgenomes-11-64-branchpoint' (was 74ff1d1)
+Create tag cvs/ensemblgenomes-12-65-branchpoint;        Deleted tag 'ensemblgenomes-12-65-branchpoint' (was 74ff1d1)
+Create tag cvs/ensemblgenomes-4-56-branchpoint;         Deleted tag 'ensemblgenomes-4-56-branchpoint' (was 060d370)
+Create tag cvs/ensemblgenomes-5-58-branchpoint;         Deleted tag 'ensemblgenomes-5-58-branchpoint' (was ea86983)
+Create tag cvs/ensemblgenomes-56-branchpoint;   Deleted tag 'ensemblgenomes-56-branchpoint' (was 060d370)
+Create tag cvs/ensemblgenomes-6-59-branchpoint;         Deleted tag 'ensemblgenomes-6-59-branchpoint' (was 0b70cdb)
+Create tag cvs/ensemblgenomes-7-60-branchpoint;         Deleted tag 'ensemblgenomes-7-60-branchpoint' (was ba1d58b)
+Create tag cvs/ensemblgenomes-8-61-branchpoint;         Deleted tag 'ensemblgenomes-8-61-branchpoint' (was e439a4f)
+Create tag cvs/ensemblgenomes-9-62-branchpoint;         Deleted tag 'ensemblgenomes-9-62-branchpoint' (was a273886)
+Create tag cvs/mergepoint-branch-ensembl-dec09-head;    Deleted tag 'mergepoint-branch-ensembl-dec09-head' (was 9b742f1)
+Create tag cvs/mergepoint-vega-38-dev-1;        Deleted tag 'mergepoint-vega-38-dev-1' (was 33d5c8d)
+Create tag cvs/mergepoint-vega-38-dev-head-1;   Deleted tag 'mergepoint-vega-38-dev-head-1' (was 5f13338)
+Create tag cvs/mergepoint-vega-44-dev-head-1;   Deleted tag 'mergepoint-vega-44-dev-head-1' (was ec7fc3f)
+Create tag cvs/mergepoint-vega-46-dev-e48;      Deleted tag 'mergepoint-vega-46-dev-e48' (was 5b12bc2)
+Create tag cvs/mergepoint-vega-46-dev-head-1;   Deleted tag 'mergepoint-vega-46-dev-head-1' (was 5b12bc2)
+Create tag cvs/mergepoint-vega-48dev_HEAD;      Deleted tag 'mergepoint-vega-48dev_HEAD' (was b60fd97)
+Create tag cvs/mergepoint-vega-49-dev-head;     Deleted tag 'mergepoint-vega-49-dev-head' (was 98dbd69)
+Create tag cvs/start;   Deleted tag 'start' (was f64ecb0)
+Create tag cvs/tag-ensemblgenomes-16-69;        Deleted tag 'tag-ensemblgenomes-16-69' (was c961454)
+Create tag cvs/tag-ensemblgenomes-18-71;        Deleted tag 'tag-ensemblgenomes-18-71' (was a082d55)
+Create tag cvs/tag-ensemblgenomes-19-72;        Deleted tag 'tag-ensemblgenomes-19-72' (was 16b5d6e)
+Create tag cvs/tag-ensemblgenomes-20-73;        Deleted tag 'tag-ensemblgenomes-20-73' (was 0938646)
+Create tag cvs/vega-19-branchpoint;     Deleted tag 'vega-19-branchpoint' (was b5bddde)
+Create tag cvs/vega-2-branchpoint;      Deleted tag 'vega-2-branchpoint' (was e399986)
+Create tag cvs/vega-23-1-branchpoint;   Deleted tag 'vega-23-1-branchpoint' (was c3f26d3)
+Create tag cvs/vega-23-2-branchpoint;   Deleted tag 'vega-23-2-branchpoint' (was 1f365c5)
+Create tag cvs/vega-23-3-branchpoint;   Deleted tag 'vega-23-3-branchpoint' (was 1f365c5)
+Create tag cvs/vega-23-4-branchpoint;   Deleted tag 'vega-23-4-branchpoint' (was 1f365c5)
+Create tag cvs/vega-23-5-branchpoint;   Deleted tag 'vega-23-5-branchpoint' (was 1f365c5)
+Create tag cvs/vega-26-1-branchpoint;   Deleted tag 'vega-26-1-branchpoint' (was 1b691c7)
+Create tag cvs/vega-26-2-branchpoint;   Deleted tag 'vega-26-2-branchpoint' (was 1b691c7)
+Create tag cvs/vega-26-dev-branchpoint;         Deleted tag 'vega-26-dev-branchpoint' (was 1b691c7)
+Create tag cvs/vega-28-1-branchpoint;   Deleted tag 'vega-28-1-branchpoint' (was 0893b20)
+Create tag cvs/vega-30-1-branchpoint;   Deleted tag 'vega-30-1-branchpoint' (was dead065)
+Create tag cvs/vega-30-3-branchpoint;   Deleted tag 'vega-30-3-branchpoint' (was dead065)
+Create tag cvs/vega-31-1-branchpoint;   Deleted tag 'vega-31-1-branchpoint' (was f482bc7)
+Create tag cvs/vega-31-branchpoint;     Deleted tag 'vega-31-branchpoint' (was dead065)
+Create tag cvs/vega-31-dev-branchpoint;         Deleted tag 'vega-31-dev-branchpoint' (was 768ac28)
+Create tag cvs/vega-35-1-branchpoint;   Deleted tag 'vega-35-1-branchpoint' (was b7ff380)
+Create tag cvs/vega-35-dev-branchpoint;         Deleted tag 'vega-35-dev-branchpoint' (was b7ff380)
+Create tag cvs/vega-37-dev-branchpoint;         Deleted tag 'vega-37-dev-branchpoint' (was 33d5c8d)
+Create tag cvs/vega-38-1-branchpoint;   Deleted tag 'vega-38-1-branchpoint' (was 5f13338)
+Create tag cvs/vega-39-branchpoint;     Deleted tag 'vega-39-branchpoint' (was 3edb0d7)
+Create tag cvs/vega-40-1-branchpoint;   Deleted tag 'vega-40-1-branchpoint' (was 9c1900e)
+Create tag cvs/vega-40-dev-branchpoint;         Deleted tag 'vega-40-dev-branchpoint' (was 848aaea)
+Create tag cvs/vega-41-1-branchpoint;   Deleted tag 'vega-41-1-branchpoint' (was 9868bc9)
+Create tag cvs/vega-41-branchpoint;     Deleted tag 'vega-41-branchpoint' (was 9868bc9)
+Create tag cvs/vega-41-dev-branchpoint;         Deleted tag 'vega-41-dev-branchpoint' (was 9868bc9)
+Create tag cvs/vega-43-branchpoint;     Deleted tag 'vega-43-branchpoint' (was fedba96)
+Create tag cvs/vega-43-dev-branchpoint;         Deleted tag 'vega-43-dev-branchpoint' (was 01e5561)
+Create tag cvs/vega-44-2-branchpoint;   Deleted tag 'vega-44-2-branchpoint' (was 969baef)
+Create tag cvs/vega-44-3-branchpoint;   Deleted tag 'vega-44-3-branchpoint' (was 969baef)
+Create tag cvs/vega-44-branchpoint;     Deleted tag 'vega-44-branchpoint' (was 969baef)
+Create tag cvs/vega-44-dev-branchpoint;         Deleted tag 'vega-44-dev-branchpoint' (was 9b79b95)
+Create tag cvs/vega-46-1-branchpoint;   Deleted tag 'vega-46-1-branchpoint' (was 9b66908)
+Create tag cvs/vega-46-3-branchpoint;   Deleted tag 'vega-46-3-branchpoint' (was 9b66908)
+Create tag cvs/vega-46-4-branchpoint;   Deleted tag 'vega-46-4-branchpoint' (was 9b66908)
+Create tag cvs/vega-46-dev-branchpoint;         Deleted tag 'vega-46-dev-branchpoint' (was 9b66908)
+Create tag cvs/vega-48-dev-branchpoint;         Deleted tag 'vega-48-dev-branchpoint' (was d26a277)
+Create tag cvs/vega-49-1-branchpoint;   Deleted tag 'vega-49-1-branchpoint' (was b60fd97)
+Create tag cvs/vega-49-2-branchpoint;   Deleted tag 'vega-49-2-branchpoint' (was b525ccb)
+Create tag cvs/vega-49-3-branchpoint;   Deleted tag 'vega-49-3-branchpoint' (was b525ccb)
+Create tag cvs/vega-49-5-branchpoint;   Deleted tag 'vega-49-5-branchpoint' (was f700a55)
+Create tag cvs/vega-49-dev-branchpoint;         Deleted tag 'vega-49-dev-branchpoint' (was b60fd97)
+Create tag cvs/vega-55-1-branchpoint;   Deleted tag 'vega-55-1-branchpoint' (was 55ab9d9)
+Create tag cvs/vega-59-1-branchpoint;   Deleted tag 'vega-59-1-branchpoint' (was 0b70cdb)
+Create tag cvs/vega-61-1-branchpoint;   Deleted tag 'vega-61-1-branchpoint' (was e439a4f)
+Deleted branch _diff_to_cvs (was 19413ca).
+Counting objects: 63541, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13353/13353), done.
+Writing objects: 100% (63541/63541), done.
+Total 63541 (delta 42841), reused 63541 (delta 42841)
+HEAD is now at 5e0b03a Fixed bug when restricting the end of the cigar_line.
+
+
+Diffed some tags and/or branches.
+  Found 263 with no diff.
+  Found 0 with differences between CVS and Git,
+    see /run/shm/cvs2git-ensembl-compara.nuOaBE/checkrevs/
+
+
+
+Leaving you to clean up: C2G_TMP=/run/shm/cvs2git-ensembl-compara.nuOaBE
+  rm -rf /run/shm/cvs2git-ensembl-compara.nuOaBE
