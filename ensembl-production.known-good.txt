@@ -1,6 +1,8 @@
 # Branches and tags with nul-diff
-116af6065daf1c5b939f33e73c2404cc3dad09a7 refs/tags/cvs/start
-790311f08fd1a96dbb19f96c67899f243aa0eb82 refs/heads/cvs/branch-ensembl-73
-790311f08fd1a96dbb19f96c67899f243aa0eb82 refs/tags/cvs/ensembl-73-branchpoint
-dbb77a609e9a9b7b4063ff201c56ca5204ac421d refs/heads/cvs/branch-ensembl-74
-dbb77a609e9a9b7b4063ff201c56ca5204ac421d refs/tags/cvs/ensembl-74-branchpoint
+c1a707f99420cd726c194495cddfd5ab9cd9c234 refs/heads/cvs/branch-ensembl-74
+c1a707f99420cd726c194495cddfd5ab9cd9c234 refs/remotes/origin/cvs/branch-ensembl-74
+c1a707f99420cd726c194495cddfd5ab9cd9c234 refs/tags/cvs/ensembl-74-branchpoint
+c824f5007f3ab02f333f8f68ad59224279ef5986 refs/heads/cvs/branch-ensembl-73
+c824f5007f3ab02f333f8f68ad59224279ef5986 refs/remotes/origin/cvs/branch-ensembl-73
+c824f5007f3ab02f333f8f68ad59224279ef5986 refs/tags/cvs/ensembl-73-branchpoint
+c9aadfc502568fe3e8b923736103b7aaefaaf387 refs/tags/cvs/start
