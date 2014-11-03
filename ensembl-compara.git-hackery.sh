@@ -55,6 +55,8 @@ filter_ref_and_compare () {
 
 }
 
+# I thought it was not needed to hack the repo any further, but we could have done the following
+
 # docs/healthchecks.txt removed just before ensembl-66-branchpoint
 #commit_deletion=`git log --grep="this is a part of RelCo doc" --pretty=oneline | awk '{print $1}'`
 #commit_firstbranch=`git log --grep="Fixed bug which still used genomic_align_group table" release/66  --pretty=oneline | awk '{print $1}'`
