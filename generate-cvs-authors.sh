@@ -12,12 +12,16 @@
 #
 #    # Assumes you need public CVS access
 #    ./generate-cvs-authors.sh ensembl-rest
+#
+#    # Allows you to change the CVS root area if need be
+#    ./generate-cvs-authors.sh biomart-perl biomart
 
 PROJ=${1:-ensembl-foo}
+ROOT=${2:-ensembl}
 if [ -d CVS ]; then
   authors=$(cvs -Q log | grep author | perl -lne 'print $1 if (/author: (\w+);/)' | sort -u)
 else
-  public_cvsroot=':pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/ensembl'
+  public_cvsroot=":pserver:cvsuser@cvs.sanger.ac.uk:/cvsroot/$ROOT"
   authors=$(cvs -Q -d $public_cvsroot rlog $PROJ | grep author | perl -lne 'print $1 if (/author: (\w+);/)' | sort -u)  
 fi
 

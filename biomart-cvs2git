@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Written using Git 1.7.2.3, may work with older
+#
+# Recommend running like
+#    TMPDIR=/dev/shm ./git-importing/cvs2git-ensembl-foo ensembl-otter
+
+PROJ=${1:-ensembl-foo}
+PROJ_NO_SLASHES=`echo "$PROJ" | sed 's/\//_/g'`
+CANONPFX=ENSCOPY-
+
+IEC_NAME=${PROJ}.iec
+
+GIDIR=$(
+    cd $( dirname $0 )
+    echo $PWD
+)
+export PATH=$GIDIR:$PATH
+
+# Import functions
+source $GIDIR/cvs2git-funcs
+
+cvs2git__init
+
+unpack_hwime "${CVS2GIT_SQUIRREL_DIR}/${PROJ_NO_SLASHES}.repo.tgz" || fetchrepo
+canon_repocvs $CANONPFX$( echo $PROJ_NO_SLASHES | tr a-z A-Z )
+subdir_promote
+
+unpack_hwime "${CVS2GIT_SQUIRREL_DIR}/${PROJ_NO_SLASHES}.git.tgz"  || do_import
+
+checktags_all
+
+clean_git_namespace
+clean_git_workingcopy
+
+checktag_show_summary

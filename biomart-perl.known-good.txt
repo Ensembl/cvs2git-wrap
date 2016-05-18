@@ -1,0 +1,6 @@
+# Branches and tags with nul-diff
+0e187a5529ac17be930d26e06233ba229444c1d1 refs/heads/cvs/release-0_7
+0f15a200af31a3f55fa91fe9797939776e0317bc refs/tags/cvs/start
+2727a5ae242ad99f2fea5c5780c2e789750ecd5d refs/heads/cvs/release-0_5
+42d54e19abbb8da414fa466cfadebb1ea6bc6c91 refs/heads/cvs/pride
+e6dad1195a67dcc9e6b38ef3d57f97d7952768e3 refs/heads/cvs/release-0_6
