@@ -53,7 +53,7 @@ fetchrepo() {
     anacode) fetchrepo_intcvs1 ;;
     acedb) fetchrepo_intcvs1 ;;
     zmap) fetchrepo_intcvs1 ;;
-    *biomart*) fetchrepo_biomart ;;
+    *mart*) fetchrepo_biomart ;;
     *) echo "Fetch $PROJ from which repository?" >&2
         exit 9 ;;
     esac
@@ -172,6 +172,10 @@ subdir_promote() {
     if [ -f $REPOCVS/$topdir/.cvsignore,v ]; then
         echo ".cvsignore,v file found under $topdir/ - promote it"
         mv -v $REPOCVS/$topdir/.cvsignore,v $REPOCVS/.
+    fi
+    if [ -d $REPOCVS/$topdir/.settings ]; then
+        echo ".settings file found under $topdir/ - promote it"
+        mv -v $REPOCVS/$topdir/.settings $REPOCVS/.
     fi
     rmdir $REPOCVS/$topdir
     else
