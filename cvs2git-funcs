@@ -69,14 +69,26 @@ fetchrepo_ensembl() {
     if [ "$SCP_NO_BAIL" ]; then
       set +e
     fi
-    scp -rp cvs.sanger.ac.uk:/cvsroot/ensembl/$PROJ $REPOCVS/
+    scp_root_var='cvs.sanger.ac.uk:/cvsroot'
+    # IF WE HAD A LOCAL_CVS THEN RESET THE SCP ROOT PATH
+    if [ -z "$LOCAL_CVS" ]; then
+        if [ ! -d $LOCAL_CVS/locks ];
+            echo "No locks directory found under $LOCAL_CVS/locks. Check and try again"
+            exit 1
+        fi
+        scp_root_var=$LOCAL_CVS
+        echo "Setting the CVS SCP root to $scp_root_var"
+    else
+        echo "Leaving the CVS SCP root as $scp_root_var"
+    fi
+    scp -rp $scp_root_var/ensembl/$PROJ $REPOCVS/
 
 # Provide enough CVSROOT to operate.
 #
 # Don't copy history, taglog or commitlog (too big)
 # Don't include the ,v files because they won't have our tags, and we
 # aren't going to import them
-    scp -rp cvs.sanger.ac.uk:/cvsroot/ensembl/CVSROOT/{modules,loginfo,commitinfo,cvswrappers,config,taginfo,verifymsg,editinfo,rcsinfo,notify,checkoutlist,cvsignore} $REPOCVS/CVSROOT/
+    scp -rp $scp_root_var/ensembl/CVSROOT/{modules,loginfo,commitinfo,cvswrappers,config,taginfo,verifymsg,editinfo,rcsinfo,notify,checkoutlist,cvsignore} $REPOCVS/CVSROOT/
     
     chmod -R +w $REPOCVS
     
