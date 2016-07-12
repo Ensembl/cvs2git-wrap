@@ -55,6 +55,7 @@ fetchrepo() {
     zmap) fetchrepo_intcvs1 ;;
     *mart*) fetchrepo_biomart ;;
     rd-utils) fetchrepo_ensembl ;;
+    eg-*) fetchrepo_ensembl ;;
     *) echo "Fetch $PROJ from which repository?" >&2
         exit 9 ;;
     esac
