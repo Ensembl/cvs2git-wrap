@@ -54,6 +54,7 @@ fetchrepo() {
     acedb) fetchrepo_intcvs1 ;;
     zmap) fetchrepo_intcvs1 ;;
     *mart*) fetchrepo_biomart ;;
+    rd-utils) fetchrepo_ensembl ;;
     *) echo "Fetch $PROJ from which repository?" >&2
         exit 9 ;;
     esac
@@ -76,6 +77,8 @@ fetchrepo_ensembl() {
 # Don't include the ,v files because they won't have our tags, and we
 # aren't going to import them
     scp -rp cvs.sanger.ac.uk:/cvsroot/ensembl/CVSROOT/{modules,loginfo,commitinfo,cvswrappers,config,taginfo,verifymsg,editinfo,rcsinfo,notify,checkoutlist,cvsignore} $REPOCVS/CVSROOT/
+    
+    chmod -R +w $REPOCVS
     
     if [ "$SCP_NO_BAIL" ]; then
       set -e
