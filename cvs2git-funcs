@@ -72,8 +72,8 @@ fetchrepo_ensembl() {
     fi
     scp_root_var='cvs.sanger.ac.uk:/cvsroot'
     # IF WE HAD A LOCAL_CVS THEN RESET THE SCP ROOT PATH
-    if [ -z "$LOCAL_CVS" ]; then
-        if [ ! -d $LOCAL_CVS/locks ];
+    if [ -n "$LOCAL_CVS" ]; then
+        if [ ! -d $LOCAL_CVS/locks ]; then
             echo "No locks directory found under $LOCAL_CVS/locks. Check and try again"
             exit 1
         fi
